@@ -1,0 +1,50 @@
+{
+  "fixtures": [
+    {
+      "match": {
+        "toolCallId": "toolu_find_1",
+        "toolResultContains": "Contacts tagged int:pricing, status subscribed:"
+      },
+      "response": {
+        "content": "There are subscribed contacts interested in pricing; the list above shows the newest."
+      }
+    },
+    {
+      "match": {
+        "toolCallId": "toolu_seg_1",
+        "toolResultContains": "more matched but were excluded"
+      },
+      "response": { "content": "The Newsletter audience without customers is ready to review." }
+    },
+    {
+      "match": {
+        "userMessage": "How many subscribed contacts are interested in pricing?",
+        "toolName": "crm_find_contacts"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_find_1",
+            "name": "crm_find_contacts",
+            "arguments": { "tags_any": ["int:pricing"], "statuses": ["subscribed"], "per_page": 5 }
+          }
+        ]
+      }
+    },
+    {
+      "match": {
+        "userMessage": "Preview the Newsletter audience without customers",
+        "toolName": "crm_segment_preview"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_seg_1",
+            "name": "crm_segment_preview",
+            "arguments": { "lists_any": ["Newsletter"], "exclude_tags": ["stage:customer"] }
+          }
+        ]
+      }
+    }
+  ]
+}

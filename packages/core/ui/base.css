@@ -1,0 +1,139 @@
+/* FluentSuite view base styles. Uses MCP Apps host variables, with neutral fallbacks. */
+:root {
+  color-scheme: light dark;
+  --fs-bg: var(--color-background-primary, Canvas);
+  --fs-bg-2: var(--color-background-secondary, color-mix(in srgb, CanvasText 5%, Canvas));
+  --fs-text: var(--color-text-primary, CanvasText);
+  --fs-text-2: var(--color-text-secondary, color-mix(in srgb, CanvasText 65%, Canvas));
+  --fs-border: var(--color-border-primary, color-mix(in srgb, CanvasText 15%, Canvas));
+  --fs-accent: var(--color-text-info, #2563eb);
+  --fs-ok: var(--color-text-success, #15803d);
+  --fs-warn: var(--color-text-warning, #b45309);
+  --fs-danger: var(--color-text-danger, #b91c1c);
+  --fs-radius: var(--border-radius-md, 10px);
+  --fs-font: var(--font-sans, system-ui, -apple-system, "Segoe UI", sans-serif);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 14px / 1.45 var(--fs-font);
+  color: var(--fs-text);
+  background: transparent;
+}
+.card {
+  background: var(--fs-bg);
+  border: 1px solid var(--fs-border);
+  border-radius: var(--fs-radius);
+  padding: 16px;
+}
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+.muted {
+  color: var(--fs-text-2);
+}
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--fs-bg-2);
+  border: 1px solid var(--fs-border);
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-subscribed {
+  color: var(--fs-ok);
+}
+.status-unsubscribed,
+.status-bounced,
+.status-complained,
+.status-spammed {
+  color: var(--fs-danger);
+}
+.status-pending {
+  color: var(--fs-warn);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 8px;
+}
+.stat {
+  background: var(--fs-bg-2);
+  border-radius: 8px;
+  padding: 8px;
+}
+.stat b {
+  display: block;
+  font-size: 18px;
+}
+.section {
+  margin-top: 14px;
+}
+.section h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fs-text-2);
+  margin: 0 0 6px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+td,
+th {
+  text-align: left;
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--fs-border);
+}
+th {
+  color: var(--fs-text-2);
+  font-weight: 500;
+}
+button {
+  font: inherit;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--fs-border);
+  background: var(--fs-bg-2);
+  color: var(--fs-text);
+  cursor: pointer;
+}
+button.primary {
+  background: var(--fs-accent);
+  color: #fff;
+  border-color: transparent;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.empty {
+  padding: 24px;
+  text-align: center;
+}
+.error {
+  color: var(--fs-danger);
+}

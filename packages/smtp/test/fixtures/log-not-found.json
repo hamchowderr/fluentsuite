@@ -1,0 +1,11 @@
+{
+  "route": "GET smtp/logs/999999",
+  "status": 404,
+  "body": {
+    "code": "fluentsuite_not_found",
+    "message": "No logged email with that id.",
+    "data": {
+      "status": 404
+    }
+  }
+}

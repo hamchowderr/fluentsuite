@@ -1,0 +1,1146 @@
+{
+  "route": "GET smtp/logs/<id>?include_body=1, for every row",
+  "status": 200,
+  "body": [
+    {
+      "id": 38,
+      "created_at": "2026-10-12 03:04:44",
+      "status": "failed",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <wordpress@example.com>",
+      "subject": "Your verification code",
+      "source": "WordPress",
+      "provider": "Smtp",
+      "retries": 0,
+      "resent_count": 0,
+      "error": "SMTP Error: Could not connect to SMTP host. Connection refused (111)",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: Could not connect to SMTP host. Connection refused (111)",
+      "send_time_ms": null,
+      "updated_at": "2026-10-12 03:29:38",
+      "body_truncated": false,
+      "body": "<p>Your verification code is <strong>482913</strong>. It expires in 10 minutes.</p>"
+    },
+    {
+      "id": 37,
+      "created_at": "2026-10-12 03:04:44",
+      "status": "failed",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <wordpress@example.com>",
+      "subject": "Password reset for your account",
+      "source": "WordPress",
+      "provider": "Smtp",
+      "retries": 0,
+      "resent_count": 0,
+      "error": "SMTP Error: Could not connect to SMTP host. Connection refused (111)",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: Could not connect to SMTP host. Connection refused (111)",
+      "send_time_ms": null,
+      "updated_at": "2026-10-12 03:29:38",
+      "body_truncated": false,
+      "body": "<p>Someone asked to reset the password for ava.thompson.</p><p><a href=\"https://smtp.example.test/wp-login.php?action=rp&key=FAKEkey0123456789abcd&login=ava.thompson\">Reset your password</a></p>"
+    },
+    {
+      "id": 1,
+      "created_at": "2026-10-12 01:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-12 01:53:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 2,
+      "created_at": "2026-10-11 16:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "liam.carter@example.com",
+          "name": "Liam Carter"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1001",
+      "source": "FluentCart",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-11 16:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 3,
+      "created_at": "2026-10-11 06:53:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "mia.rossi@example.com",
+          "name": "Mia Rossi"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-11 06:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 4,
+      "created_at": "2026-10-10 21:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "noah.patel@example.com",
+          "name": "Noah Patel"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-10 21:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 5,
+      "created_at": "2026-10-10 11:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "zoe.kim@example.com",
+          "name": "Zoe Kim"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-10 11:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 6,
+      "created_at": "2026-10-10 02:23:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "ethan.brooks@example.com",
+          "name": "Ethan Brooks"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-10 02:23:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 7,
+      "created_at": "2026-10-09 16:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "isla.novak@example.com",
+          "name": "Isla Novak"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1006",
+      "source": "FluentCart",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-09 16:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 8,
+      "created_at": "2026-10-09 07:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "lucas.moreau@example.com",
+          "name": "Lucas Moreau"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-09 07:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 9,
+      "created_at": "2026-10-08 21:53:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-08 21:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 10,
+      "created_at": "2026-10-08 12:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "liam.carter@example.com",
+          "name": "Liam Carter"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-08 12:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 11,
+      "created_at": "2026-10-08 02:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "mia.rossi@example.com",
+          "name": "Mia Rossi"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-08 02:53:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 12,
+      "created_at": "2026-10-07 17:23:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "noah.patel@example.com",
+          "name": "Noah Patel"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1011",
+      "source": "FluentCart",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-07 17:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 13,
+      "created_at": "2026-10-07 07:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "zoe.kim@example.com",
+          "name": "Zoe Kim"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-07 07:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 14,
+      "created_at": "2026-10-06 22:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ethan.brooks@example.com",
+          "name": "Ethan Brooks"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-06 22:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 15,
+      "created_at": "2026-10-06 12:53:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "isla.novak@example.com",
+          "name": "Isla Novak"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-06 12:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 16,
+      "created_at": "2026-10-06 03:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "lucas.moreau@example.com",
+          "name": "Lucas Moreau"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-06 03:23:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 17,
+      "created_at": "2026-10-05 17:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1016",
+      "source": "FluentCart",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-05 17:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 18,
+      "created_at": "2026-10-05 08:23:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "liam.carter@example.com",
+          "name": "Liam Carter"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-05 08:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 19,
+      "created_at": "2026-10-04 22:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "mia.rossi@example.com",
+          "name": "Mia Rossi"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-04 22:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 20,
+      "created_at": "2026-10-04 13:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "noah.patel@example.com",
+          "name": "Noah Patel"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-04 13:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 21,
+      "created_at": "2026-10-04 03:53:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "zoe.kim@example.com",
+          "name": "Zoe Kim"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-04 03:53:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 22,
+      "created_at": "2026-10-03 18:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ethan.brooks@example.com",
+          "name": "Ethan Brooks"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1021",
+      "source": "FluentCart",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-03 18:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 23,
+      "created_at": "2026-10-03 08:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "isla.novak@example.com",
+          "name": "Isla Novak"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-03 08:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 24,
+      "created_at": "2026-10-02 23:23:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "lucas.moreau@example.com",
+          "name": "Lucas Moreau"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-02 23:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 25,
+      "created_at": "2026-10-02 13:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-02 13:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 26,
+      "created_at": "2026-10-02 04:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "liam.carter@example.com",
+          "name": "Liam Carter"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-02 04:23:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 27,
+      "created_at": "2026-10-01 18:53:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "mia.rossi@example.com",
+          "name": "Mia Rossi"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1026",
+      "source": "FluentCart",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-01 18:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 28,
+      "created_at": "2026-10-01 09:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "noah.patel@example.com",
+          "name": "Noah Patel"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-10-01 09:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 29,
+      "created_at": "2026-09-30 23:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "zoe.kim@example.com",
+          "name": "Zoe Kim"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-30 23:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 30,
+      "created_at": "2026-09-30 14:23:40",
+      "status": "failed",
+      "to": [
+        {
+          "email": "ethan.brooks@example.com",
+          "name": "Ethan Brooks"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Smtp",
+      "retries": 2,
+      "resent_count": 0,
+      "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+      "send_time_ms": null,
+      "updated_at": "2026-10-12 03:23:13",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 31,
+      "created_at": "2026-09-30 04:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "isla.novak@example.com",
+          "name": "Isla Novak"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-30 04:53:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    },
+    {
+      "id": 32,
+      "created_at": "2026-09-29 19:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "lucas.moreau@example.com",
+          "name": "Lucas Moreau"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Your order receipt #1031",
+      "source": "FluentCart",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-29 19:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional receipt.</p>"
+    },
+    {
+      "id": 33,
+      "created_at": "2026-09-29 09:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "ava.thompson@example.com",
+          "name": "Ava Thompson"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Password reset request",
+      "source": "WordPress",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-29 09:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional reset email. No real link.</p>"
+    },
+    {
+      "id": 34,
+      "created_at": "2026-09-29 00:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "liam.carter@example.com",
+          "name": "Liam Carter"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "We received your message",
+      "source": "Fluent Forms",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-29 00:23:40",
+      "body_truncated": false,
+      "body": "<p>Fictional form confirmation.</p>"
+    },
+    {
+      "id": 35,
+      "created_at": "2026-09-28 14:53:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "mia.rossi@example.com",
+          "name": "Mia Rossi"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Booking confirmed for Friday",
+      "source": "FluentBooking",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-28 14:53:40",
+      "body_truncated": false,
+      "body": "<p>Fictional booking.</p>"
+    },
+    {
+      "id": 36,
+      "created_at": "2026-09-28 05:23:40",
+      "status": "sent",
+      "to": [
+        {
+          "email": "noah.patel@example.com",
+          "name": "Noah Patel"
+        }
+      ],
+      "from": "FluentSuite Test <noreply@example.com>",
+      "subject": "Welcome to the newsletter",
+      "source": "FluentCRM",
+      "provider": "Simulator",
+      "retries": 0,
+      "resent_count": 0,
+      "error": null,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "text/html"
+        }
+      ],
+      "attachments": [],
+      "response": "Sending was simulated. No email was actually sent.",
+      "send_time_ms": null,
+      "updated_at": "2026-09-28 05:23:40",
+      "body_truncated": false,
+      "body": "<p>Thanks for subscribing (fictional).</p>"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "route": "GET subscribers/<id>/emails?per_page=5&page=1",
+  "status": 200,
+  "body": {
+    "emails": {
+      "current_page": 1,
+      "data": [],
+      "first_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/50/emails/?page=1",
+      "from": null,
+      "last_page": 1,
+      "last_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/50/emails/?page=1",
+      "links": [
+        {
+          "url": null,
+          "label": "pagination.previous",
+          "active": false
+        },
+        {
+          "url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/50/emails/?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "pagination.next",
+          "active": false
+        }
+      ],
+      "next_page_url": null,
+      "path": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/50/emails",
+      "per_page": 5,
+      "prev_page_url": null,
+      "to": null,
+      "total": 0
+    }
+  }
+}

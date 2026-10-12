@@ -1,0 +1,137 @@
+{
+  "route": "GET sequences/<id>?with[]=sequence_emails&with[]=email_stats",
+  "status": 200,
+  "body": {
+    "sequence": {
+      "id": 2,
+      "parent_id": null,
+      "type": "email_sequence",
+      "title": "New lead nurture (test)",
+      "available_urls": null,
+      "slug": "new-lead-nurture-test",
+      "status": "draft",
+      "template_id": null,
+      "email_subject": null,
+      "email_pre_header": null,
+      "email_body": "",
+      "recipients_count": 0,
+      "delay": "0",
+      "utm_status": "0",
+      "utm_source": null,
+      "utm_medium": null,
+      "utm_campaign": null,
+      "utm_term": null,
+      "utm_content": null,
+      "design_template": "simple",
+      "scheduled_at": null,
+      "settings": {
+        "mailer_settings": {
+          "from_name": "",
+          "from_email": "",
+          "reply_to_name": "",
+          "reply_to_email": "",
+          "is_custom": "no"
+        }
+      },
+      "created_by": "2",
+      "created_at": "2026-10-12 02:03:50",
+      "updated_at": "2026-10-12 02:03:50"
+    },
+    "sequence_emails": [
+      {
+        "id": 3,
+        "parent_id": "2",
+        "type": "sequence_mail",
+        "title": "Welcome step 1",
+        "available_urls": null,
+        "slug": "welcome-step-1",
+        "status": "published",
+        "template_id": "0",
+        "email_subject": "Welcome step 1",
+        "email_pre_header": null,
+        "email_body": "<p>Fictional sequence email 1.</p>",
+        "recipients_count": "0",
+        "delay": "172800",
+        "utm_status": "0",
+        "utm_source": null,
+        "utm_medium": null,
+        "utm_campaign": null,
+        "utm_term": null,
+        "utm_content": null,
+        "design_template": "simple",
+        "scheduled_at": null,
+        "settings": {
+          "timings": {
+            "delay": 2,
+            "delay_unit": "days"
+          },
+          "mailer_settings": {
+            "from_name": "",
+            "from_email": "",
+            "reply_to_name": "",
+            "reply_to_email": "",
+            "is_custom": "no"
+          }
+        },
+        "created_by": "2",
+        "created_at": "2026-10-12 02:04:09",
+        "updated_at": "2026-10-12 02:04:09",
+        "stats": {
+          "total": 0,
+          "sent": 0,
+          "clicks": 0,
+          "views": 0,
+          "unsubscribers": 0,
+          "revenue": false
+        }
+      },
+      {
+        "id": 4,
+        "parent_id": "2",
+        "type": "sequence_mail",
+        "title": "Welcome step 2",
+        "available_urls": null,
+        "slug": "welcome-step-2",
+        "status": "published",
+        "template_id": "0",
+        "email_subject": "Welcome step 2",
+        "email_pre_header": null,
+        "email_body": "<p>Fictional sequence email 2.</p>",
+        "recipients_count": "0",
+        "delay": "345600",
+        "utm_status": "0",
+        "utm_source": null,
+        "utm_medium": null,
+        "utm_campaign": null,
+        "utm_term": null,
+        "utm_content": null,
+        "design_template": "simple",
+        "scheduled_at": null,
+        "settings": {
+          "timings": {
+            "delay": 4,
+            "delay_unit": "days"
+          },
+          "mailer_settings": {
+            "from_name": "",
+            "from_email": "",
+            "reply_to_name": "",
+            "reply_to_email": "",
+            "is_custom": "no"
+          }
+        },
+        "created_by": "2",
+        "created_at": "2026-10-12 02:04:10",
+        "updated_at": "2026-10-12 02:04:10",
+        "stats": {
+          "total": 0,
+          "sent": 0,
+          "clicks": 0,
+          "views": 0,
+          "unsubscribers": 0,
+          "revenue": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "fixtures": [
+    {
+      "match": { "toolCallId": "toolu_detail_1", "toolResultContains": "[redacted]" },
+      "response": {
+        "content": "The newest unread Contact entry asks for a quote; its attachment is a PDF and the tax id is redacted."
+      }
+    },
+    {
+      "match": { "toolCallId": "toolu_find_1", "toolResultContains": "unread entries" },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_detail_1",
+            "name": "forms_entry_detail",
+            "arguments": { "id": 1, "form_id": 3 }
+          }
+        ]
+      }
+    },
+    {
+      "match": {
+        "userMessage": "What came in on the contact form?",
+        "toolName": "forms_find_entries"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_find_1",
+            "name": "forms_find_entries",
+            "arguments": { "form_id": 3, "status": "unread", "per_page": 5 }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "route": "GET smtp/report",
+  "status": 200,
+  "body": {
+    "after": "2026-09-13",
+    "before": "2026-10-12",
+    "totals": {
+      "sent": 26,
+      "failed": 12
+    },
+    "days": [
+      {
+        "date": "2026-09-28",
+        "sent": 2,
+        "failed": 0
+      },
+      {
+        "date": "2026-09-29",
+        "sent": 3,
+        "failed": 0
+      },
+      {
+        "date": "2026-09-30",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-01",
+        "sent": 1,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-02",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-03",
+        "sent": 2,
+        "failed": 0
+      },
+      {
+        "date": "2026-10-04",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-05",
+        "sent": 1,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-06",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-07",
+        "sent": 1,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-08",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-09",
+        "sent": 2,
+        "failed": 0
+      },
+      {
+        "date": "2026-10-10",
+        "sent": 2,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-11",
+        "sent": 1,
+        "failed": 1
+      },
+      {
+        "date": "2026-10-12",
+        "sent": 1,
+        "failed": 2
+      }
+    ],
+    "sources": [
+      {
+        "source": "WordPress",
+        "sent": 5,
+        "failed": 4
+      },
+      {
+        "source": "FluentCRM",
+        "sent": 6,
+        "failed": 2
+      },
+      {
+        "source": "Fluent Forms",
+        "sent": 5,
+        "failed": 2
+      },
+      {
+        "source": "FluentBooking",
+        "sent": 5,
+        "failed": 2
+      },
+      {
+        "source": "FluentCart",
+        "sent": 5,
+        "failed": 2
+      }
+    ],
+    "failure_reasons": [
+      {
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable",
+        "count": 10,
+        "latest_id": 3,
+        "latest_at": "2026-10-11 06:53:40"
+      },
+      {
+        "error": "SMTP Error: Could not connect to SMTP host. Connection refused (111)",
+        "count": 2,
+        "latest_id": 38,
+        "latest_at": "2026-10-12 03:04:44"
+      }
+    ]
+  }
+}

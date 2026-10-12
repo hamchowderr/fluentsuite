@@ -1,0 +1,38 @@
+{
+  "route": "GET report/form-stats?start_date=2026-07-01&end_date=2026-10-12",
+  "status": 200,
+  "body": {
+    "form_stats": {
+      "period": "103 days",
+      "total_submissions": {
+        "value": 61,
+        "period_value": 61,
+        "change": "+100%",
+        "change_type": "up"
+      },
+      "spam_submissions": {
+        "value": 0,
+        "period_value": 0,
+        "change": "0%",
+        "change_type": "neutral"
+      },
+      "active_integrations": {
+        "value": 0
+      },
+      "unread_submissions": {
+        "value": 18
+      },
+      "read_submissions": {
+        "value": 36
+      },
+      "active_forms": {
+        "value": 0,
+        "change": "0%",
+        "change_type": "neutral"
+      },
+      "read_submission_rate": {
+        "value": 59
+      }
+    }
+  }
+}

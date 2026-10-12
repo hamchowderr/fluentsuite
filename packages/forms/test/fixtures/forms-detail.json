@@ -1,0 +1,1502 @@
+{
+  "route": "GET forms/<id>, submissions/resources, settings notifications, integrations per test form",
+  "status": 200,
+  "body": {
+    "3": {
+      "form": {
+        "id": 3,
+        "title": "Contact (test)",
+        "status": "published",
+        "appearance_settings": null,
+        "form_fields": "{\"fields\":[{\"index\":0,\"element\":\"input_name\",\"attributes\":{\"name\":\"names\",\"data-type\":\"name-element\"},\"settings\":{\"container_class\":\"\",\"admin_field_label\":\"Name\",\"conditional_logics\":[]},\"fields\":{\"first_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"first_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"First Name\"},\"settings\":{\"container_class\":\"\",\"label\":\"First Name\",\"help_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"middle_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"middle_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Middle Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"last_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"last_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Last Name\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Last Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}}},\"editor_options\":{\"title\":\"Name Fields\",\"element\":\"name-fields\",\"icon_class\":\"ff-edit-name\",\"template\":\"nameFields\"},\"uniqElKey\":\"el_1570866006692\"},{\"index\":1,\"element\":\"input_email\",\"attributes\":{\"type\":\"email\",\"name\":\"email\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Email Address\"},\"settings\":{\"container_class\":\"\",\"label\":\"Email\",\"label_placement\":\"\",\"help_message\":\"\",\"admin_field_label\":\"\",\"validation_rules\":{\"required\":{\"value\":true,\"message\":\"This field is required\",\"global\":true},\"email\":{\"value\":true,\"message\":\"This field must contain a valid email\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Email Address\",\"icon_class\":\"ff-edit-email\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570866012914\"},{\"index\":2,\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"subject\",\"value\":\"\",\"class\":\"\",\"placeholder\":\"Subject\"},\"settings\":{\"container_class\":\"\",\"label\":\"Subject\",\"label_placement\":\"\",\"admin_field_label\":\"Subject\",\"help_message\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"editor_options\":{\"title\":\"Simple Text\",\"icon_class\":\"ff-edit-text\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570878958648\"},{\"index\":3,\"element\":\"textarea\",\"attributes\":{\"name\":\"message\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Your Message\",\"rows\":4,\"cols\":2},\"settings\":{\"container_class\":\"\",\"label\":\"Your Message\",\"admin_field_label\":\"\",\"label_placement\":\"\",\"help_message\":\"\",\"validation_rules\":{\"required\":{\"value\":true,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"editor_options\":{\"title\":\"Text Area\",\"icon_class\":\"ff-edit-textarea\",\"template\":\"inputTextarea\"},\"uniqElKey\":\"el_1570879001207\"},{\"index\":90,\"element\":\"input_file\",\"attributes\":{\"type\":\"file\",\"name\":\"attachment\"},\"settings\":{\"label\":\"Attachment\",\"container_class\":\"\",\"validation_rules\":[]},\"editor_options\":{\"title\":\"File Upload\"},\"uniqElKey\":\"el_fs_attachment\"},{\"index\":91,\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"tax_id\",\"value\":\"\"},\"settings\":{\"label\":\"Tax ID\",\"container_class\":\"\",\"validation_rules\":[]},\"editor_options\":{\"title\":\"Simple Text\"},\"uniqElKey\":\"el_fs_tax_id\"}],\"submitButton\":{\"uniqElKey\":\"el_1524065200616\",\"element\":\"button\",\"attributes\":{\"type\":\"submit\",\"class\":\"\"},\"settings\":{\"align\":\"left\",\"button_style\":\"default\",\"container_class\":\"\",\"help_message\":\"\",\"background_color\":\"#1a7efb\",\"button_size\":\"md\",\"color\":\"#ffffff\",\"button_ui\":{\"type\":\"default\",\"text\":\"Submit Form\",\"img_url\":\"\"}},\"editor_options\":{\"title\":\"Submit Button\"}}}",
+        "has_payment": "0",
+        "type": "form",
+        "conditions": null,
+        "created_by": "1",
+        "created_at": "2026-10-12 03:45:59",
+        "updated_at": "2026-10-12 03:45:59",
+        "form_meta": [
+          {
+            "id": 10,
+            "form_id": "3",
+            "meta_key": "formSettings",
+            "value": "{\"confirmation\":{\"redirectTo\":\"samePage\",\"messageToShow\":\"Thank you for your message. We will get in touch with you shortly\",\"customPage\":null,\"samePageFormBehavior\":\"hide_form\",\"customUrl\":null},\"restrictions\":{\"limitNumberOfEntries\":{\"enabled\":false,\"numberOfEntries\":null,\"period\":\"total\",\"limitReachedMsg\":\"Maximum number of entries exceeded.\"},\"scheduleForm\":{\"enabled\":false,\"start\":null,\"end\":null,\"selectedDays\":null,\"pendingMsg\":\"Form submission is not started yet.\",\"expiredMsg\":\"Form submission is now closed.\"},\"requireLogin\":{\"enabled\":false,\"requireLoginMsg\":\"You must be logged in to submit the form.\"},\"denyEmptySubmission\":{\"enabled\":false,\"message\":\"Sorry, you cannot submit an empty form. Let's hear what you wanna say.\"},\"restrictForm\":{\"enabled\":false,\"fields\":{\"ip\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! You can't submit a form from your IP address.\",\"validation_type\":\"fail_on_condition_met\"},\"country\":{\"status\":false,\"values\":[],\"message\":\"Sorry! You can't submit a form the country you are residing.\",\"validation_type\":\"fail_on_condition_met\"},\"keywords\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! Your submission contains some restricted keywords.\"}}}},\"layout\":{\"labelPlacement\":\"top\",\"asteriskPlacement\":\"asterisk-right\",\"helpMessagePlacement\":\"with_label\",\"errorMessagePlacement\":\"inline\",\"cssClassName\":\"\"},\"delete_entry_on_submission\":\"no\",\"conv_form_per_step_save\":false,\"conv_form_resume_from_last_step\":false}"
+          },
+          {
+            "id": 12,
+            "form_id": "3",
+            "meta_key": "notifications",
+            "value": "{\"name\":\"Admin Notification Email\",\"sendTo\":{\"type\":\"email\",\"email\":\"{wp.admin_email}\",\"field\":\"email\",\"routing\":[{\"email\":null,\"field\":null,\"operator\":\"=\",\"value\":null}]},\"fromName\":\"\",\"fromEmail\":\"\",\"replyTo\":\"\",\"bcc\":\"\",\"subject\":\"[{inputs.names}] New Form Submission\",\"message\":\"<p>{all_data}<\\/p>\\n<p>This form submitted at: {embed_post.permalink}<\\/p>\",\"conditionals\":{\"status\":false,\"type\":\"all\",\"conditions\":[{\"field\":null,\"operator\":\"=\",\"value\":null}]},\"enabled\":false,\"email_template\":\"\"}"
+          },
+          {
+            "id": 11,
+            "form_id": "3",
+            "meta_key": "template_name",
+            "value": "basic_contact_form"
+          }
+        ]
+      },
+      "resources": {
+        "fields": {
+          "names": {
+            "element": "input_name",
+            "admin_label": "Name",
+            "raw": {
+              "index": 0,
+              "element": "input_name",
+              "attributes": {
+                "name": "names",
+                "data-type": "name-element"
+              },
+              "settings": {
+                "container_class": "",
+                "admin_field_label": "Name",
+                "conditional_logics": []
+              },
+              "fields": {
+                "first_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "first_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "First Name"
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "First Name",
+                    "help_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "middle_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "middle_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Middle Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "last_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "last_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "Last Name",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Last Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                }
+              },
+              "editor_options": {
+                "title": "Name Fields",
+                "element": "name-fields",
+                "icon_class": "ff-edit-name",
+                "template": "nameFields"
+              },
+              "uniqElKey": "el_1570866006692"
+            }
+          },
+          "email": {
+            "element": "input_email",
+            "admin_label": "Email",
+            "raw": {
+              "index": 1,
+              "element": "input_email",
+              "attributes": {
+                "type": "email",
+                "name": "email",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "Email Address"
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Email",
+                "label_placement": "",
+                "help_message": "",
+                "admin_field_label": "",
+                "validation_rules": {
+                  "required": {
+                    "value": true,
+                    "message": "This field is required",
+                    "global": true
+                  },
+                  "email": {
+                    "value": true,
+                    "message": "This field must contain a valid email",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "title": "Email Address",
+                "icon_class": "ff-edit-email",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570866012914"
+            }
+          },
+          "subject": {
+            "element": "input_text",
+            "admin_label": "Subject",
+            "raw": {
+              "index": 2,
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "subject",
+                "value": "",
+                "class": "",
+                "placeholder": "Subject"
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Subject",
+                "label_placement": "",
+                "admin_field_label": "Subject",
+                "help_message": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": {
+                  "type": "any",
+                  "status": false,
+                  "conditions": [
+                    {
+                      "field": "",
+                      "value": "",
+                      "operator": ""
+                    }
+                  ]
+                }
+              },
+              "editor_options": {
+                "title": "Simple Text",
+                "icon_class": "ff-edit-text",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570878958648"
+            }
+          },
+          "message": {
+            "element": "textarea",
+            "admin_label": "Your Message",
+            "raw": {
+              "index": 3,
+              "element": "textarea",
+              "attributes": {
+                "name": "message",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "Your Message",
+                "rows": 4,
+                "cols": 2
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Your Message",
+                "admin_field_label": "",
+                "label_placement": "",
+                "help_message": "",
+                "validation_rules": {
+                  "required": {
+                    "value": true,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": {
+                  "type": "any",
+                  "status": false,
+                  "conditions": [
+                    {
+                      "field": "",
+                      "value": "",
+                      "operator": ""
+                    }
+                  ]
+                }
+              },
+              "editor_options": {
+                "title": "Text Area",
+                "icon_class": "ff-edit-textarea",
+                "template": "inputTextarea"
+              },
+              "uniqElKey": "el_1570879001207"
+            }
+          },
+          "attachment": {
+            "element": "input_file",
+            "admin_label": "Attachment",
+            "raw": {
+              "index": 90,
+              "element": "input_file",
+              "attributes": {
+                "type": "file",
+                "name": "attachment"
+              },
+              "settings": {
+                "label": "Attachment",
+                "container_class": "",
+                "validation_rules": []
+              },
+              "editor_options": {
+                "title": "File Upload"
+              },
+              "uniqElKey": "el_fs_attachment"
+            }
+          },
+          "tax_id": {
+            "element": "input_text",
+            "admin_label": "Tax ID",
+            "raw": {
+              "index": 91,
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "tax_id",
+                "value": ""
+              },
+              "settings": {
+                "label": "Tax ID",
+                "container_class": "",
+                "validation_rules": []
+              },
+              "editor_options": {
+                "title": "Simple Text"
+              },
+              "uniqElKey": "el_fs_tax_id"
+            }
+          }
+        }
+      },
+      "notifications": [
+        {
+          "id": 12,
+          "form_id": "3",
+          "meta_key": "notifications",
+          "value": {
+            "name": "Admin Notification Email",
+            "sendTo": {
+              "type": "email",
+              "email": "{wp.admin_email}",
+              "field": "email",
+              "routing": [
+                {
+                  "email": null,
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "fromName": "",
+            "fromEmail": "",
+            "replyTo": "",
+            "bcc": "",
+            "subject": "[{inputs.names}] New Form Submission",
+            "message": "<p>{all_data}</p>\n<p>This form submitted at: {embed_post.permalink}</p>",
+            "conditionals": {
+              "status": false,
+              "type": "all",
+              "conditions": [
+                {
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "enabled": false,
+            "email_template": ""
+          }
+        }
+      ],
+      "integrations": {
+        "feeds": [],
+        "available_integrations": {
+          "fluentcrm": {
+            "title": "FluentCRM Integration",
+            "logo": "https://forms.example.test/wp-content/plugins/fluent-crm/assets/images/fluentcrm-logo.svg",
+            "is_active": true,
+            "configure_title": "Configuration required!",
+            "global_configure_url": "#",
+            "configure_message": "FluentCRM is not configured yet! Please configure your FluentCRM API first",
+            "configure_button_text": "Set FluentCRM"
+          }
+        },
+        "all_module_config_url": "https://forms.example.test/wp-admin/admin.php?page=fluent_forms_add_ons"
+      }
+    },
+    "4": {
+      "form": {
+        "id": 4,
+        "title": "Newsletter signup (test)",
+        "status": "published",
+        "appearance_settings": null,
+        "form_fields": "{\"fields\":[{\"index\":1,\"element\":\"section_break\",\"attributes\":{\"id\":\"\",\"class\":\"\"},\"settings\":{\"label\":\"\",\"description\":\"<h3 style=\\\"text-align: center;\\\">Subscribe to our newsletter<\\/h3>\\n<p style=\\\"text-align: center;\\\">Welcome to our Newsletter Subscription Center. Sign up in the newsletter form below to receive the latest news and updates from our company.<\\/p>\",\"align\":\"left\",\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Section Break\",\"icon_class\":\"icon-puzzle-piece\",\"template\":\"sectionBreak\"},\"uniqElKey\":\"el_1570690779710\"},{\"index\":0,\"element\":\"input_name\",\"attributes\":{\"name\":\"names\",\"data-type\":\"name-element\"},\"settings\":{\"container_class\":\"\",\"admin_field_label\":\"Name\",\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"fields\":{\"first_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"first_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"First Name\",\"help_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"middle_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"middle_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Middle Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"last_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"last_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Last Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}}},\"editor_options\":{\"title\":\"Name Fields\",\"element\":\"name-fields\",\"icon_class\":\"icon-user\",\"template\":\"nameFields\"},\"uniqElKey\":\"el_1570702292674\"},{\"index\":1,\"element\":\"input_email\",\"attributes\":{\"type\":\"email\",\"name\":\"email\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Email\",\"label_placement\":\"left\",\"help_message\":\"N:B: We will send you an email describing how to activate your newsletter subscription.\",\"admin_field_label\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true},\"email\":{\"value\":true,\"message\":\"This field must contain a valid email\",\"global\":true}},\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"editor_options\":{\"title\":\"Email Address\",\"icon_class\":\"icon-envelope-o\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570690876531\"}],\"submitButton\":{\"uniqElKey\":\"el_1524065200616\",\"element\":\"button\",\"attributes\":{\"type\":\"submit\",\"class\":\"\"},\"settings\":{\"align\":\"right\",\"button_style\":\"red\",\"container_class\":\"\",\"help_message\":\"\",\"background_color\":\"#F56C6C\",\"button_size\":\"md\",\"color\":\"#ffffff\",\"button_ui\":{\"type\":\"default\",\"text\":\"Subscribe\",\"img_url\":\"\"},\"normal_styles\":[],\"hover_styles\":[],\"current_state\":\"normal_styles\"},\"editor_options\":{\"title\":\"Submit Button\"}}}",
+        "has_payment": "0",
+        "type": "form",
+        "conditions": null,
+        "created_by": "1",
+        "created_at": "2026-10-12 03:46:00",
+        "updated_at": "2026-10-12 03:46:00",
+        "form_meta": [
+          {
+            "id": 13,
+            "form_id": "4",
+            "meta_key": "formSettings",
+            "value": "{\"confirmation\":{\"redirectTo\":\"samePage\",\"messageToShow\":\"Thank you for your message. We will get in touch with you shortly\",\"customPage\":null,\"samePageFormBehavior\":\"hide_form\",\"customUrl\":null},\"restrictions\":{\"limitNumberOfEntries\":{\"enabled\":false,\"numberOfEntries\":null,\"period\":\"total\",\"limitReachedMsg\":\"Maximum number of entries exceeded.\"},\"scheduleForm\":{\"enabled\":false,\"start\":null,\"end\":null,\"selectedDays\":null,\"pendingMsg\":\"Form submission is not started yet.\",\"expiredMsg\":\"Form submission is now closed.\"},\"requireLogin\":{\"enabled\":false,\"requireLoginMsg\":\"You must be logged in to submit the form.\"},\"denyEmptySubmission\":{\"enabled\":false,\"message\":\"Sorry, you cannot submit an empty form. Let's hear what you wanna say.\"},\"restrictForm\":{\"enabled\":false,\"fields\":{\"ip\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! You can't submit a form from your IP address.\",\"validation_type\":\"fail_on_condition_met\"},\"country\":{\"status\":false,\"values\":[],\"message\":\"Sorry! You can't submit a form the country you are residing.\",\"validation_type\":\"fail_on_condition_met\"},\"keywords\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! Your submission contains some restricted keywords.\"}}}},\"layout\":{\"labelPlacement\":\"top\",\"asteriskPlacement\":\"asterisk-right\",\"helpMessagePlacement\":\"with_label\",\"errorMessagePlacement\":\"inline\",\"cssClassName\":\"\"},\"delete_entry_on_submission\":\"no\",\"conv_form_per_step_save\":false,\"conv_form_resume_from_last_step\":false}"
+          },
+          {
+            "id": 15,
+            "form_id": "4",
+            "meta_key": "notifications",
+            "value": "{\"name\":\"Admin Notification Email\",\"sendTo\":{\"type\":\"email\",\"email\":\"{wp.admin_email}\",\"field\":\"email\",\"routing\":[{\"email\":null,\"field\":null,\"operator\":\"=\",\"value\":null}]},\"fromName\":\"\",\"fromEmail\":\"\",\"replyTo\":\"\",\"bcc\":\"\",\"subject\":\"[{inputs.names}] New Form Submission\",\"message\":\"<p>{all_data}<\\/p>\\n<p>This form submitted at: {embed_post.permalink}<\\/p>\",\"conditionals\":{\"status\":false,\"type\":\"all\",\"conditions\":[{\"field\":null,\"operator\":\"=\",\"value\":null}]},\"enabled\":false,\"email_template\":\"\"}"
+          },
+          {
+            "id": 14,
+            "form_id": "4",
+            "meta_key": "template_name",
+            "value": "newsletter_form"
+          }
+        ]
+      },
+      "resources": {
+        "fields": {
+          "names": {
+            "element": "input_name",
+            "admin_label": "Name",
+            "raw": {
+              "index": 0,
+              "element": "input_name",
+              "attributes": {
+                "name": "names",
+                "data-type": "name-element"
+              },
+              "settings": {
+                "container_class": "",
+                "admin_field_label": "Name",
+                "conditional_logics": {
+                  "type": "any",
+                  "status": false,
+                  "conditions": [
+                    {
+                      "field": "",
+                      "value": "",
+                      "operator": ""
+                    }
+                  ]
+                }
+              },
+              "fields": {
+                "first_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "first_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "First Name",
+                    "help_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "middle_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "middle_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Middle Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "last_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "last_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Last Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                }
+              },
+              "editor_options": {
+                "title": "Name Fields",
+                "element": "name-fields",
+                "icon_class": "icon-user",
+                "template": "nameFields"
+              },
+              "uniqElKey": "el_1570702292674"
+            }
+          },
+          "email": {
+            "element": "input_email",
+            "admin_label": "Email",
+            "raw": {
+              "index": 1,
+              "element": "input_email",
+              "attributes": {
+                "type": "email",
+                "name": "email",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": ""
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Email",
+                "label_placement": "left",
+                "help_message": "N:B: We will send you an email describing how to activate your newsletter subscription.",
+                "admin_field_label": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  },
+                  "email": {
+                    "value": true,
+                    "message": "This field must contain a valid email",
+                    "global": true
+                  }
+                },
+                "conditional_logics": {
+                  "type": "any",
+                  "status": false,
+                  "conditions": [
+                    {
+                      "field": "",
+                      "value": "",
+                      "operator": ""
+                    }
+                  ]
+                }
+              },
+              "editor_options": {
+                "title": "Email Address",
+                "icon_class": "icon-envelope-o",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570690876531"
+            }
+          }
+        }
+      },
+      "notifications": [
+        {
+          "id": 15,
+          "form_id": "4",
+          "meta_key": "notifications",
+          "value": {
+            "name": "Admin Notification Email",
+            "sendTo": {
+              "type": "email",
+              "email": "{wp.admin_email}",
+              "field": "email",
+              "routing": [
+                {
+                  "email": null,
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "fromName": "",
+            "fromEmail": "",
+            "replyTo": "",
+            "bcc": "",
+            "subject": "[{inputs.names}] New Form Submission",
+            "message": "<p>{all_data}</p>\n<p>This form submitted at: {embed_post.permalink}</p>",
+            "conditionals": {
+              "status": false,
+              "type": "all",
+              "conditions": [
+                {
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "enabled": false,
+            "email_template": ""
+          }
+        }
+      ],
+      "integrations": {
+        "feeds": [],
+        "available_integrations": {
+          "fluentcrm": {
+            "title": "FluentCRM Integration",
+            "logo": "https://forms.example.test/wp-content/plugins/fluent-crm/assets/images/fluentcrm-logo.svg",
+            "is_active": true,
+            "configure_title": "Configuration required!",
+            "global_configure_url": "#",
+            "configure_message": "FluentCRM is not configured yet! Please configure your FluentCRM API first",
+            "configure_button_text": "Set FluentCRM"
+          }
+        },
+        "all_module_config_url": "https://forms.example.test/wp-admin/admin.php?page=fluent_forms_add_ons"
+      }
+    },
+    "5": {
+      "form": {
+        "id": 5,
+        "title": "Event registration (test)",
+        "status": "published",
+        "appearance_settings": null,
+        "form_fields": "{\"fields\":[{\"index\":1,\"element\":\"section_break\",\"attributes\":{\"id\":\"\",\"class\":\"\"},\"settings\":{\"label\":\"Volunteer Sign Up\",\"description\":\"<div id=\\\"fsSection83427461\\\" class=\\\"fsSection fs1Col\\\">\\n<div id=\\\"fsRow3617571-3\\\" class=\\\"fsRow fsFieldRow fsLastRow\\\">\\n<div id=\\\"fsCell83427463\\\" class=\\\"fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100\\\" lang=\\\"en\\\">\\n<p class=\\\"fsSectionText\\\">Come with us and help out your local community!<\\/p>\\n<\\/div>\\n<\\/div>\\n<\\/div>\\n<div id=\\\"fsSection83427464\\\" class=\\\"fsSection fs1Col\\\">\\u00a0<\\/div>\",\"align\":\"center\",\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Section Break\",\"icon_class\":\"icon-puzzle-piece\",\"template\":\"sectionBreak\"},\"uniqElKey\":\"el_1570685851381\"},{\"index\":9,\"element\":\"input_checkbox\",\"attributes\":{\"type\":\"checkbox\",\"name\":\"checkbox\",\"value\":[]},\"settings\":{\"container_class\":\"\",\"label\":\"Where would you like to volunteer (Check any that apply)\",\"admin_field_label\":\"\",\"label_placement\":\"\",\"display_type\":\"\",\"help_message\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"options\":{\"Food bank\":\"Food bank\",\"Animal shelter\":\"Animal shelter\",\"Preschool\":\"Preschool\",\"City lawn care\":\"City lawn care\",\"Community Service\":\"Community Service\"},\"editor_options\":{\"title\":\"Check Box\",\"icon_class\":\"icon-check-square-o\",\"template\":\"inputCheckbox\"},\"uniqElKey\":\"el_1570685921940\"},{\"index\":2,\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"input_text\",\"value\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"How many hours a week can you dedicate?\",\"label_placement\":\"\",\"admin_field_label\":\"\",\"help_message\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Simple Text\",\"icon_class\":\"icon-text-width\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570685965867\"},{\"index\":13,\"element\":\"input_date\",\"attributes\":{\"type\":\"text\",\"name\":\"datetime\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"When are you available to start?\",\"admin_field_label\":\"\",\"label_placement\":\"\",\"date_format\":\"d\\/m\\/Y\",\"help_message\":\"\",\"is_time_enabled\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Time & Date\",\"icon_class\":\"icon-calendar-o\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570686157250\"},{\"index\":0,\"element\":\"input_name\",\"attributes\":{\"name\":\"names\",\"data-type\":\"name-element\"},\"settings\":{\"container_class\":\"\",\"admin_field_label\":\"Name\",\"conditional_logics\":[]},\"fields\":{\"first_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"first_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"First Name\",\"help_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"middle_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"middle_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Middle Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"last_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"last_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Last Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}}},\"editor_options\":{\"title\":\"Name Fields\",\"element\":\"name-fields\",\"icon_class\":\"icon-user\",\"template\":\"nameFields\"},\"uniqElKey\":\"el_1570686018387\"},{\"index\":4,\"element\":\"address\",\"attributes\":{\"id\":\"\",\"class\":\"\",\"name\":\"address1\",\"data-type\":\"address-element\"},\"settings\":{\"label\":\"\",\"admin_field_label\":\"\",\"conditional_logics\":[]},\"fields\":{\"address_line_1\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"address_line_1\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Permanent Address \",\"admin_field_label\":\"\",\"help_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"address_line_2\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"address_line_2\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Address Line 2\",\"admin_field_label\":\"\",\"help_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"city\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"city\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"City\",\"admin_field_label\":\"\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"state\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"state\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"State\",\"admin_field_label\":\"\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"zip\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"zip\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Zip Code\",\"admin_field_label\":\"\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"country\":{\"element\":\"select_country\",\"attributes\":{\"name\":\"country\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\",\"required\":false},\"settings\":{\"container_class\":\"\",\"label\":\"Country\",\"admin_field_label\":\"\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"country_list\":{\"active_list\":\"all\",\"visible_list\":[],\"hidden_list\":[]},\"conditional_logics\":[]},\"options\":{\"BD\":\"Bangladesh\",\"US\":\"US of America\"},\"editor_options\":{\"title\":\"Country List\",\"element\":\"country-list\",\"icon_class\":\"icon-text-width\",\"template\":\"selectCountry\"}}},\"editor_options\":{\"title\":\"Address Fields\",\"element\":\"address-fields\",\"icon_class\":\"icon-credit-card\",\"template\":\"addressFields\"},\"uniqElKey\":\"el_1570686031467\"},{\"index\":1,\"element\":\"container\",\"attributes\":[],\"settings\":[],\"columns\":[{\"fields\":[{\"index\":2,\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"input_text_2\",\"value\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Phone\",\"label_placement\":\"\",\"admin_field_label\":\"\",\"help_message\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Simple Text\",\"icon_class\":\"icon-text-width\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570686088371\"}]},{\"fields\":[{\"index\":1,\"element\":\"input_email\",\"attributes\":{\"type\":\"email\",\"name\":\"email\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Email\",\"label_placement\":\"\",\"help_message\":\"\",\"admin_field_label\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true},\"email\":{\"value\":true,\"message\":\"This field must contain a valid email\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"title\":\"Email Address\",\"icon_class\":\"icon-envelope-o\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1570686107211\"}]}],\"editor_options\":{\"title\":\"Two Column Container\",\"icon_class\":\"icon-columns\"},\"uniqElKey\":\"el_1570686084163\"}],\"submitButton\":{\"uniqElKey\":\"el_1524065200616\",\"element\":\"button\",\"attributes\":{\"type\":\"submit\",\"class\":\"\"},\"settings\":{\"align\":\"left\",\"button_style\":\"\",\"container_class\":\"\",\"help_message\":\"\",\"background_color\":\"\",\"button_size\":\"md\",\"color\":\"\",\"button_ui\":{\"type\":\"default\",\"text\":\"Submit Form\",\"img_url\":\"\"},\"normal_styles\":{\"backgroundColor\":\"rgba(85, 66, 66, 1)\",\"color\":\"#F2EBEB\"},\"hover_styles\":[],\"current_state\":\"normal_styles\"},\"editor_options\":{\"title\":\"Submit Button\"}}}",
+        "has_payment": "0",
+        "type": "form",
+        "conditions": null,
+        "created_by": "1",
+        "created_at": "2026-10-12 03:46:01",
+        "updated_at": "2026-10-12 03:46:02",
+        "form_meta": [
+          {
+            "id": 16,
+            "form_id": "5",
+            "meta_key": "formSettings",
+            "value": "{\"confirmation\":{\"redirectTo\":\"samePage\",\"messageToShow\":\"Thank you for your message. We will get in touch with you shortly\",\"customPage\":null,\"samePageFormBehavior\":\"hide_form\",\"customUrl\":null},\"restrictions\":{\"limitNumberOfEntries\":{\"enabled\":false,\"numberOfEntries\":null,\"period\":\"total\",\"limitReachedMsg\":\"Maximum number of entries exceeded.\"},\"scheduleForm\":{\"enabled\":false,\"start\":null,\"end\":null,\"selectedDays\":null,\"pendingMsg\":\"Form submission is not started yet.\",\"expiredMsg\":\"Form submission is now closed.\"},\"requireLogin\":{\"enabled\":false,\"requireLoginMsg\":\"You must be logged in to submit the form.\"},\"denyEmptySubmission\":{\"enabled\":false,\"message\":\"Sorry, you cannot submit an empty form. Let's hear what you wanna say.\"},\"restrictForm\":{\"enabled\":false,\"fields\":{\"ip\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! You can't submit a form from your IP address.\",\"validation_type\":\"fail_on_condition_met\"},\"country\":{\"status\":false,\"values\":[],\"message\":\"Sorry! You can't submit a form the country you are residing.\",\"validation_type\":\"fail_on_condition_met\"},\"keywords\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! Your submission contains some restricted keywords.\"}}}},\"layout\":{\"labelPlacement\":\"top\",\"asteriskPlacement\":\"asterisk-right\",\"helpMessagePlacement\":\"with_label\",\"errorMessagePlacement\":\"inline\",\"cssClassName\":\"\"},\"delete_entry_on_submission\":\"no\",\"conv_form_per_step_save\":false,\"conv_form_resume_from_last_step\":false}"
+          },
+          {
+            "id": 18,
+            "form_id": "5",
+            "meta_key": "notifications",
+            "value": "{\"name\":\"Admin Notification Email\",\"sendTo\":{\"type\":\"email\",\"email\":\"{wp.admin_email}\",\"field\":\"email\",\"routing\":[{\"email\":null,\"field\":null,\"operator\":\"=\",\"value\":null}]},\"fromName\":\"\",\"fromEmail\":\"\",\"replyTo\":\"\",\"bcc\":\"\",\"subject\":\"[{inputs.names}] New Form Submission\",\"message\":\"<p>{all_data}<\\/p>\\n<p>This form submitted at: {embed_post.permalink}<\\/p>\",\"conditionals\":{\"status\":false,\"type\":\"all\",\"conditions\":[{\"field\":null,\"operator\":\"=\",\"value\":null}]},\"enabled\":false,\"email_template\":\"\"}"
+          },
+          {
+            "id": 17,
+            "form_id": "5",
+            "meta_key": "template_name",
+            "value": "volunteer_signup_form"
+          }
+        ]
+      },
+      "resources": {
+        "fields": {
+          "checkbox": {
+            "element": "input_checkbox",
+            "admin_label": "Where would you like to volunteer (Check any that apply)",
+            "raw": {
+              "index": 9,
+              "element": "input_checkbox",
+              "attributes": {
+                "type": "checkbox",
+                "name": "checkbox",
+                "value": []
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Where would you like to volunteer (Check any that apply)",
+                "admin_field_label": "",
+                "label_placement": "",
+                "display_type": "",
+                "help_message": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "options": {
+                "Food bank": "Food bank",
+                "Animal shelter": "Animal shelter",
+                "Preschool": "Preschool",
+                "City lawn care": "City lawn care",
+                "Community Service": "Community Service"
+              },
+              "editor_options": {
+                "title": "Check Box",
+                "icon_class": "icon-check-square-o",
+                "template": "inputCheckbox"
+              },
+              "uniqElKey": "el_1570685921940"
+            }
+          },
+          "input_text": {
+            "element": "input_text",
+            "admin_label": "How many hours a week can you dedicate?",
+            "raw": {
+              "index": 2,
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "input_text",
+                "value": "",
+                "class": "",
+                "placeholder": ""
+              },
+              "settings": {
+                "container_class": "",
+                "label": "How many hours a week can you dedicate?",
+                "label_placement": "",
+                "admin_field_label": "",
+                "help_message": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "title": "Simple Text",
+                "icon_class": "icon-text-width",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570685965867"
+            }
+          },
+          "datetime": {
+            "element": "input_date",
+            "admin_label": "When are you available to start?",
+            "raw": {
+              "index": 13,
+              "element": "input_date",
+              "attributes": {
+                "type": "text",
+                "name": "datetime",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": ""
+              },
+              "settings": {
+                "container_class": "",
+                "label": "When are you available to start?",
+                "admin_field_label": "",
+                "label_placement": "",
+                "date_format": "d/m/Y",
+                "help_message": "",
+                "is_time_enabled": true,
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "title": "Time & Date",
+                "icon_class": "icon-calendar-o",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570686157250"
+            }
+          },
+          "names": {
+            "element": "input_name",
+            "admin_label": "Name",
+            "raw": {
+              "index": 0,
+              "element": "input_name",
+              "attributes": {
+                "name": "names",
+                "data-type": "name-element"
+              },
+              "settings": {
+                "container_class": "",
+                "admin_field_label": "Name",
+                "conditional_logics": []
+              },
+              "fields": {
+                "first_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "first_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "First Name",
+                    "help_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "middle_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "middle_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Middle Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "last_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "last_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Last Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                }
+              },
+              "editor_options": {
+                "title": "Name Fields",
+                "element": "name-fields",
+                "icon_class": "icon-user",
+                "template": "nameFields"
+              },
+              "uniqElKey": "el_1570686018387"
+            }
+          },
+          "address1": {
+            "element": "address",
+            "admin_label": "address",
+            "raw": {
+              "index": 4,
+              "element": "address",
+              "attributes": {
+                "id": "",
+                "class": "",
+                "name": "address1",
+                "data-type": "address-element"
+              },
+              "settings": {
+                "label": "",
+                "admin_field_label": "",
+                "conditional_logics": []
+              },
+              "fields": {
+                "address_line_1": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "address_line_1",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Permanent Address ",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "address_line_2": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "address_line_2",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Address Line 2",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "city": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "city",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "City",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "state": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "state",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "State",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "zip": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "zip",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Zip Code",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "country": {
+                  "element": "select_country",
+                  "attributes": {
+                    "name": "country",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "",
+                    "required": false
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Country",
+                    "admin_field_label": "",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "country_list": {
+                      "active_list": "all",
+                      "visible_list": [],
+                      "hidden_list": []
+                    },
+                    "conditional_logics": []
+                  },
+                  "options": {
+                    "BD": "Bangladesh",
+                    "US": "US of America"
+                  },
+                  "editor_options": {
+                    "title": "Country List",
+                    "element": "country-list",
+                    "icon_class": "icon-text-width",
+                    "template": "selectCountry"
+                  }
+                }
+              },
+              "editor_options": {
+                "title": "Address Fields",
+                "element": "address-fields",
+                "icon_class": "icon-credit-card",
+                "template": "addressFields"
+              },
+              "uniqElKey": "el_1570686031467"
+            }
+          },
+          "input_text_2": {
+            "element": "input_text",
+            "admin_label": "Phone",
+            "raw": {
+              "index": 2,
+              "element": "input_text",
+              "attributes": {
+                "type": "text",
+                "name": "input_text_2",
+                "value": "",
+                "class": "",
+                "placeholder": ""
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Phone",
+                "label_placement": "",
+                "admin_field_label": "",
+                "help_message": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "title": "Simple Text",
+                "icon_class": "icon-text-width",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570686088371"
+            }
+          },
+          "email": {
+            "element": "input_email",
+            "admin_label": "Email",
+            "raw": {
+              "index": 1,
+              "element": "input_email",
+              "attributes": {
+                "type": "email",
+                "name": "email",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": ""
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Email",
+                "label_placement": "",
+                "help_message": "",
+                "admin_field_label": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  },
+                  "email": {
+                    "value": true,
+                    "message": "This field must contain a valid email",
+                    "global": true
+                  }
+                },
+                "conditional_logics": []
+              },
+              "editor_options": {
+                "title": "Email Address",
+                "icon_class": "icon-envelope-o",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_1570686107211"
+            }
+          }
+        }
+      },
+      "notifications": [
+        {
+          "id": 18,
+          "form_id": "5",
+          "meta_key": "notifications",
+          "value": {
+            "name": "Admin Notification Email",
+            "sendTo": {
+              "type": "email",
+              "email": "{wp.admin_email}",
+              "field": "email",
+              "routing": [
+                {
+                  "email": null,
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "fromName": "",
+            "fromEmail": "",
+            "replyTo": "",
+            "bcc": "",
+            "subject": "[{inputs.names}] New Form Submission",
+            "message": "<p>{all_data}</p>\n<p>This form submitted at: {embed_post.permalink}</p>",
+            "conditionals": {
+              "status": false,
+              "type": "all",
+              "conditions": [
+                {
+                  "field": null,
+                  "operator": "=",
+                  "value": null
+                }
+              ]
+            },
+            "enabled": false,
+            "email_template": ""
+          }
+        }
+      ],
+      "integrations": {
+        "feeds": [],
+        "available_integrations": {
+          "fluentcrm": {
+            "title": "FluentCRM Integration",
+            "logo": "https://forms.example.test/wp-content/plugins/fluent-crm/assets/images/fluentcrm-logo.svg",
+            "is_active": true,
+            "configure_title": "Configuration required!",
+            "global_configure_url": "#",
+            "configure_message": "FluentCRM is not configured yet! Please configure your FluentCRM API first",
+            "configure_button_text": "Set FluentCRM"
+          }
+        },
+        "all_module_config_url": "https://forms.example.test/wp-admin/admin.php?page=fluent_forms_add_ons"
+      }
+    },
+    "6": {
+      "form": {
+        "id": 6,
+        "title": "Donation (test)",
+        "status": "published",
+        "appearance_settings": null,
+        "form_fields": "{\"fields\":[{\"index\":0,\"element\":\"input_name\",\"attributes\":{\"name\":\"names\",\"data-type\":\"name-element\"},\"settings\":{\"container_class\":\"\",\"admin_field_label\":\"Name\",\"conditional_logics\":[],\"label_placement\":\"top\"},\"fields\":{\"first_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"first_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"First Name\",\"maxlength\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"First Name\",\"help_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"middle_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"middle_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Middle Name\",\"required\":false,\"maxlength\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Middle Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":false,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}},\"last_name\":{\"element\":\"input_text\",\"attributes\":{\"type\":\"text\",\"name\":\"last_name\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Last Name\",\"required\":false,\"maxlength\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Last Name\",\"help_message\":\"\",\"error_message\":\"\",\"visible\":true,\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":[]},\"editor_options\":{\"template\":\"inputText\"}}},\"editor_options\":{\"title\":\"Name Fields\",\"element\":\"name-fields\",\"icon_class\":\"ff-edit-name\",\"template\":\"nameFields\"},\"uniqElKey\":\"el_15925024747330.600432137734858\"},{\"index\":1,\"element\":\"input_email\",\"attributes\":{\"type\":\"email\",\"name\":\"email\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Email Address\"},\"settings\":{\"container_class\":\"\",\"label\":\"Email\",\"label_placement\":\"\",\"help_message\":\"\",\"admin_field_label\":\"\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true},\"email\":{\"value\":true,\"message\":\"This field must contain a valid email\",\"global\":true}},\"conditional_logics\":[],\"is_unique\":\"no\",\"unique_validation_message\":\"Email address need to be unique.\"},\"editor_options\":{\"title\":\"Email Address\",\"icon_class\":\"ff-edit-email\",\"template\":\"inputText\"},\"uniqElKey\":\"el_15925024795800.5874464366027161\"},{\"index\":1,\"element\":\"container\",\"attributes\":[],\"settings\":{\"container_class\":\"\"},\"columns\":[{\"fields\":[{\"index\":8,\"element\":\"multi_payment_component\",\"attributes\":{\"type\":\"radio\",\"name\":\"payment_input\",\"value\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Donation Amount\",\"admin_field_label\":\"\",\"label_placement\":\"\",\"display_type\":\"\",\"help_message\":\"\",\"is_payment_field\":\"yes\",\"pricing_options\":[{\"label\":\"$20\",\"value\":\"20\",\"image\":\"\"},{\"label\":\"$30\",\"value\":\"30\"},{\"label\":\"$40\",\"value\":\"40\"},{\"label\":\"Other\",\"value\":\"0\"}],\"price_label\":\"Price:\",\"enable_quantity\":false,\"enable_image_input\":false,\"is_element_lock\":false,\"layout_class\":\"ff_list_buttons\",\"validation_rules\":{\"required\":{\"value\":false,\"message\":\"This field is required\",\"global\":true}},\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"editor_options\":{\"title\":\"Payment Field\",\"icon_class\":\"ff-edit-shopping-cart\",\"element\":\"input-radio\",\"template\":\"inputMultiPayment\"},\"uniqElKey\":\"el_1592502662187\"}]},{\"fields\":[{\"index\":6,\"element\":\"custom_payment_component\",\"attributes\":{\"type\":\"number\",\"name\":\"custom-payment-amount\",\"value\":\"\",\"id\":\"\",\"class\":\"\",\"placeholder\":\"Please input your amount\",\"data-payment_item\":\"yes\"},\"settings\":{\"container_class\":\"\",\"is_payment_field\":\"yes\",\"label\":\"Please Provide Custom Amount\",\"admin_field_label\":\"\",\"label_placement\":\"\",\"help_message\":\"\",\"number_step\":\"\",\"prefix_label\":\"\",\"suffix_label\":\"\",\"validation_rules\":{\"required\":{\"value\":true,\"message\":\"Donation Amount is required\"},\"numeric\":{\"value\":true,\"message\":\"This field must contain numeric value\",\"global\":true},\"min\":{\"value\":\"1\",\"message\":\"Minimum value is \",\"global\":true},\"max\":{\"value\":\"\",\"message\":\"Maximum value is \",\"global\":true}},\"conditional_logics\":{\"type\":\"any\",\"status\":true,\"conditions\":[{\"field\":\"payment_input\",\"value\":\"Other\",\"operator\":\"=\"}]},\"calculation_settings\":{\"status\":false,\"formula\":\"\"}},\"editor_options\":{\"title\":\"Custom Payment Amount\",\"icon_class\":\"ff-edit-keyboard-o\",\"template\":\"inputText\"},\"uniqElKey\":\"el_1592502665775\"}]}],\"editor_options\":{\"title\":\"Two Column Container\",\"icon_class\":\"ff-edit-column-2\"},\"uniqElKey\":\"el_15925026583450.5880630376189451\"},{\"index\":10,\"element\":\"payment_method\",\"attributes\":{\"name\":\"payment_method\",\"type\":\"radio\",\"value\":\"\"},\"settings\":{\"container_class\":\"\",\"label\":\"Choose Payment Method\",\"default_method\":\"\",\"label_placement\":\"\",\"help_message\":\"\",\"payment_methods\":{\"stripe\":{\"title\":\"Credit\\/Debit Card (Stripe)\",\"enabled\":\"yes\",\"method_value\":\"stripe\",\"settings\":{\"option_label\":{\"type\":\"text\",\"template\":\"inputText\",\"value\":\"Pay with Card (Stripe)\",\"label\":\"Method Label\"},\"require_billing_info\":{\"type\":\"checkbox\",\"template\":\"inputYesNoCheckbox\",\"value\":\"no\",\"label\":\"Require Billing info\"},\"require_shipping_info\":{\"type\":\"checkbox\",\"template\":\"inputYesNoCheckbox\",\"value\":\"no\",\"label\":\"Collect Shipping Info\"}}},\"paypal\":{\"title\":\"PayPal\",\"enabled\":\"yes\",\"method_value\":\"paypal\",\"settings\":{\"option_label\":{\"type\":\"text\",\"template\":\"inputText\",\"value\":\"Pay with PayPal\",\"label\":\"Method Label\"},\"require_shipping_address\":{\"type\":\"checkbox\",\"template\":\"inputYesNoCheckbox\",\"value\":\"no\",\"label\":\"Require Shipping Address\"}}},\"test\":{\"title\":\"Offline Payment\",\"enabled\":\"yes\",\"method_value\":\"test\",\"settings\":{\"option_label\":{\"type\":\"text\",\"template\":\"inputText\",\"value\":\"Offline Payment\",\"label\":\"Method Label\"}}}},\"admin_field_label\":\"\",\"conditional_logics\":{\"type\":\"any\",\"status\":false,\"conditions\":[{\"field\":\"\",\"value\":\"\",\"operator\":\"\"}]}},\"editor_options\":{\"title\":\"Payment Method Field\",\"icon_class\":\"ff-edit-credit-card\",\"template\":\"inputPaymentMethods\"},\"uniqElKey\":\"el_15925026721370.24223713945247938\"}],\"submitButton\":{\"uniqElKey\":\"el_1524065200616\",\"element\":\"button\",\"attributes\":{\"type\":\"submit\",\"class\":\"\"},\"settings\":{\"align\":\"left\",\"button_style\":\"default\",\"container_class\":\"\",\"help_message\":\"\",\"background_color\":\"#1a7efb\",\"button_size\":\"md\",\"color\":\"#ffffff\",\"button_ui\":{\"type\":\"default\",\"text\":\"Donate Now {payment_total}\",\"img_url\":\"\"},\"normal_styles\":{\"backgroundColor\":\"#1a7efb\",\"borderColor\":\"#1a7efb\",\"color\":\"#ffffff\",\"borderRadius\":\"\",\"minWidth\":\"\"},\"hover_styles\":{\"backgroundColor\":\"#ffffff\",\"borderColor\":\"#1a7efb\",\"color\":\"#1a7efb\",\"borderRadius\":\"\",\"minWidth\":\"\"},\"current_state\":\"normal_styles\"},\"editor_options\":{\"title\":\"Submit Button\"}}}",
+        "has_payment": "1",
+        "type": "form",
+        "conditions": null,
+        "created_by": "1",
+        "created_at": "2026-10-12 03:46:03",
+        "updated_at": "2026-10-12 03:46:03",
+        "form_meta": [
+          {
+            "id": 19,
+            "form_id": "6",
+            "meta_key": "formSettings",
+            "value": "{\"confirmation\":{\"redirectTo\":\"samePage\",\"messageToShow\":\"Thank you for your message. We will get in touch with you shortly\",\"customPage\":null,\"samePageFormBehavior\":\"hide_form\",\"customUrl\":null},\"restrictions\":{\"limitNumberOfEntries\":{\"enabled\":false,\"numberOfEntries\":null,\"period\":\"total\",\"limitReachedMsg\":\"Maximum number of entries exceeded.\"},\"scheduleForm\":{\"enabled\":false,\"start\":null,\"end\":null,\"selectedDays\":null,\"pendingMsg\":\"Form submission is not started yet.\",\"expiredMsg\":\"Form submission is now closed.\"},\"requireLogin\":{\"enabled\":false,\"requireLoginMsg\":\"You must be logged in to submit the form.\"},\"denyEmptySubmission\":{\"enabled\":false,\"message\":\"Sorry, you cannot submit an empty form. Let's hear what you wanna say.\"},\"restrictForm\":{\"enabled\":false,\"fields\":{\"ip\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! You can't submit a form from your IP address.\",\"validation_type\":\"fail_on_condition_met\"},\"country\":{\"status\":false,\"values\":[],\"message\":\"Sorry! You can't submit a form the country you are residing.\",\"validation_type\":\"fail_on_condition_met\"},\"keywords\":{\"status\":false,\"values\":\"\",\"message\":\"Sorry! Your submission contains some restricted keywords.\"}}}},\"layout\":{\"labelPlacement\":\"top\",\"asteriskPlacement\":\"asterisk-right\",\"helpMessagePlacement\":\"with_label\",\"errorMessagePlacement\":\"inline\",\"cssClassName\":\"\"},\"delete_entry_on_submission\":\"no\",\"conv_form_per_step_save\":false,\"conv_form_resume_from_last_step\":false}"
+          },
+          {
+            "id": 20,
+            "form_id": "6",
+            "meta_key": "template_name",
+            "value": "payment_donation_form"
+          }
+        ]
+      },
+      "resources": {
+        "fields": {
+          "names": {
+            "element": "input_name",
+            "admin_label": "Name",
+            "raw": {
+              "index": 0,
+              "element": "input_name",
+              "attributes": {
+                "name": "names",
+                "data-type": "name-element"
+              },
+              "settings": {
+                "container_class": "",
+                "admin_field_label": "Name",
+                "conditional_logics": [],
+                "label_placement": "top"
+              },
+              "fields": {
+                "first_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "first_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "First Name",
+                    "maxlength": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "First Name",
+                    "help_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "middle_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "middle_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "Middle Name",
+                    "required": false,
+                    "maxlength": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Middle Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": false,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                },
+                "last_name": {
+                  "element": "input_text",
+                  "attributes": {
+                    "type": "text",
+                    "name": "last_name",
+                    "value": "",
+                    "id": "",
+                    "class": "",
+                    "placeholder": "Last Name",
+                    "required": false,
+                    "maxlength": ""
+                  },
+                  "settings": {
+                    "container_class": "",
+                    "label": "Last Name",
+                    "help_message": "",
+                    "error_message": "",
+                    "visible": true,
+                    "validation_rules": {
+                      "required": {
+                        "value": false,
+                        "message": "This field is required",
+                        "global": true
+                      }
+                    },
+                    "conditional_logics": []
+                  },
+                  "editor_options": {
+                    "template": "inputText"
+                  }
+                }
+              },
+              "editor_options": {
+                "title": "Name Fields",
+                "element": "name-fields",
+                "icon_class": "ff-edit-name",
+                "template": "nameFields"
+              },
+              "uniqElKey": "el_15925024747330.600432137734858"
+            }
+          },
+          "email": {
+            "element": "input_email",
+            "admin_label": "Email",
+            "raw": {
+              "index": 1,
+              "element": "input_email",
+              "attributes": {
+                "type": "email",
+                "name": "email",
+                "value": "",
+                "id": "",
+                "class": "",
+                "placeholder": "Email Address"
+              },
+              "settings": {
+                "container_class": "",
+                "label": "Email",
+                "label_placement": "",
+                "help_message": "",
+                "admin_field_label": "",
+                "validation_rules": {
+                  "required": {
+                    "value": false,
+                    "message": "This field is required",
+                    "global": true
+                  },
+                  "email": {
+                    "value": true,
+                    "message": "This field must contain a valid email",
+                    "global": true
+                  }
+                },
+                "conditional_logics": [],
+                "is_unique": "no",
+                "unique_validation_message": "Email address need to be unique."
+              },
+              "editor_options": {
+                "title": "Email Address",
+                "icon_class": "ff-edit-email",
+                "template": "inputText"
+              },
+              "uniqElKey": "el_15925024795800.5874464366027161"
+            }
+          }
+        }
+      },
+      "notifications": [],
+      "integrations": {
+        "feeds": [],
+        "available_integrations": {
+          "fluentcrm": {
+            "title": "FluentCRM Integration",
+            "logo": "https://forms.example.test/wp-content/plugins/fluent-crm/assets/images/fluentcrm-logo.svg",
+            "is_active": true,
+            "configure_title": "Configuration required!",
+            "global_configure_url": "#",
+            "configure_message": "FluentCRM is not configured yet! Please configure your FluentCRM API first",
+            "configure_button_text": "Set FluentCRM"
+          }
+        },
+        "all_module_config_url": "https://forms.example.test/wp-admin/admin.php?page=fluent_forms_add_ons"
+      }
+    }
+  }
+}

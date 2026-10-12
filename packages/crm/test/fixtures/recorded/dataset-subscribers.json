@@ -1,0 +1,4345 @@
+{
+  "route": "GET subscribers?per_page=100&sort_by=id&sort_type=ASC",
+  "status": 200,
+  "body": {
+    "subscribers": {
+      "current_page": 1,
+      "data": [
+        {
+          "id": 1,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ava",
+          "last_name": "Gray",
+          "email": "ava.gray1@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-11 16:17:32",
+          "last_activity": "2026-10-02 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Ava Gray",
+          "photo": "https://www.gravatar.com/avatar/cab0aff6f76926d73f2e34695db7547d?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FAva%2BGray/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "1",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ben",
+          "last_name": "Lopez",
+          "email": "ben.lopez2@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "referral",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-14 06:20:13",
+          "last_activity": "2026-10-10 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Ben Lopez",
+          "photo": "https://www.gravatar.com/avatar/02625b5efedd14fb7ef007ca259e00a2?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FBen%2BLopez/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "2",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "2",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "2",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Chloe",
+          "last_name": "Hale",
+          "email": "chloe.hale3@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "US",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-10-11 01:12:16",
+          "last_activity": "2026-09-27 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Chloe Hale",
+          "photo": "https://www.gravatar.com/avatar/15a1f5f7e9c7fef057e8f7ce99baa436?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FChloe%2BHale/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "3",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "3",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "3",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Dev",
+          "last_name": "Okafor",
+          "email": "dev.okafor4@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-17 06:42:56",
+          "last_activity": "2026-10-08 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Dev Okafor",
+          "photo": "https://www.gravatar.com/avatar/2ad80d0e622506427aeb9579b903a8b6?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FDev%2BOkafor/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "4",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "4",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "4",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Elif",
+          "last_name": "Nair",
+          "email": "elif.nair5@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-21 03:47:11",
+          "last_activity": "2026-09-28 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Elif Nair",
+          "photo": "https://www.gravatar.com/avatar/2fc8d73b1346ce288f598ce84ddf7a9f?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FElif%2BNair/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "5",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "5",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "5",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Femi",
+          "last_name": "Costa",
+          "email": "femi.costa6@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-21 18:13:43",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Femi Costa",
+          "photo": "https://www.gravatar.com/avatar/b8f36b9dca2c37f4982419638a76cb7f?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FFemi%2BCosta/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "6",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "6",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Gita",
+          "last_name": "Gray",
+          "email": "gita.gray7@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "bounced",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-27 02:57:17",
+          "last_activity": "2026-10-05 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Gita Gray",
+          "photo": "https://www.gravatar.com/avatar/0b76549ab532367bff128cf32f29058e?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FGita%2BGray/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "7",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 8,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Hugo",
+          "last_name": "Dane",
+          "email": "hugo.dane8@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-21 23:34:47",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Hugo Dane",
+          "photo": "https://www.gravatar.com/avatar/8830161e8f2ac9870fe2ff16426410f1?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FHugo%2BDane/128",
+          "tags": [
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "8",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "8",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "8",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "8",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "8",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ines",
+          "last_name": "Silva",
+          "email": "ines.silva9@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "unsubscribed",
+          "contact_type": "customer",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-22 19:46:59",
+          "last_activity": "2026-09-19 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Ines Silva",
+          "photo": "https://www.gravatar.com/avatar/4b48970473b5d9157f2796ddd53156b8?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FInes%2BSilva/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "9",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "9",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 10,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Jon",
+          "last_name": "Moss",
+          "email": "jon.moss10@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-26 15:52:56",
+          "last_activity": "2026-09-19 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Jon Moss",
+          "photo": "https://www.gravatar.com/avatar/27a3745b3c070168347889eefeaa8632?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FJon%2BMoss/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "10",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "10",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "10",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Kai",
+          "last_name": "Adams",
+          "email": "kai.adams11@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "AU",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-29 17:19:01",
+          "last_activity": "2026-09-16 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Kai Adams",
+          "photo": "https://www.gravatar.com/avatar/8dcb11d7938b7404465c1c02fcb9e376?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FKai%2BAdams/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "11",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "11",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "11",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Lena",
+          "last_name": "Silva",
+          "email": "lena.silva12@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "NG",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "unsubscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-24 11:50:23",
+          "last_activity": "2026-09-19 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Lena Silva",
+          "photo": "https://www.gravatar.com/avatar/e36acbdf6f620d41b80a2b00dd6586ea?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FLena%2BSilva/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "12",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 13,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Mo",
+          "last_name": "Dane",
+          "email": "mo.dane13@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-22 14:48:55",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Mo Dane",
+          "photo": "https://www.gravatar.com/avatar/172e99f9ad665bbae71964d2e6a9d93b?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FMo%2BDane/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "13",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "13",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "13",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "13",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Nia",
+          "last_name": "Vega",
+          "email": "nia.vega14@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-04 19:02:43",
+          "last_activity": "2026-09-16 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Nia Vega",
+          "photo": "https://www.gravatar.com/avatar/09a6d7efbbfe5e77c8abfc0a159a83a8?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FNia%2BVega/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "14",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "14",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "14",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Omar",
+          "last_name": "Nair",
+          "email": "omar.nair15@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "referral",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-28 18:14:23",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Omar Nair",
+          "photo": "https://www.gravatar.com/avatar/0e5f6c71c8ad7e2aa6b04cb69efb1e35?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FOmar%2BNair/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "15",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "15",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "15",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "15",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Pia",
+          "last_name": "Reyes",
+          "email": "pia.reyes16@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "bounced",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-07 20:10:35",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Pia Reyes",
+          "photo": "https://www.gravatar.com/avatar/e4f6e31cf3658d69f428f41db03d9805?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FPia%2BReyes/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "16",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 17,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Quinn",
+          "last_name": "Adams",
+          "email": "quinn.adams17@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "unsubscribed",
+          "contact_type": "lead",
+          "source": "referral",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-25 00:38:55",
+          "last_activity": "2026-10-01 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Quinn Adams",
+          "photo": "https://www.gravatar.com/avatar/06807cd5c62bb14eb4d7112a1ef0b95d?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FQuinn%2BAdams/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "17",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "17",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 18,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Rui",
+          "last_name": "Ellis",
+          "email": "rui.ellis18@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-19 23:05:25",
+          "last_activity": "2026-09-17 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Rui Ellis",
+          "photo": "https://www.gravatar.com/avatar/54f1bf69382c19af54503ceb228564bf?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FRui%2BEllis/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "18",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "18",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "18",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Sana",
+          "last_name": "Khan",
+          "email": "sana.khan19@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-28 18:02:52",
+          "last_activity": "2026-09-27 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Sana Khan",
+          "photo": "https://www.gravatar.com/avatar/06377cc8e50c1b459bce6b75515d2356?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FSana%2BKhan/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "19",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Tom",
+          "last_name": "Hale",
+          "email": "tom.hale20@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "NG",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "lead",
+          "source": "referral",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-14 01:39:34",
+          "last_activity": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Tom Hale",
+          "photo": "https://www.gravatar.com/avatar/bf38ac3f65de6de479d908b72a6ca7fb?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FTom%2BHale/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "20",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "20",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "20",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Uma",
+          "last_name": "Reyes",
+          "email": "uma.reyes21@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "US",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-02 08:46:24",
+          "last_activity": "2026-10-07 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Uma Reyes",
+          "photo": "https://www.gravatar.com/avatar/ef0ac5c0faa406683afaeed1f5e02cfa?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FUma%2BReyes/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "21",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "21",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Vik",
+          "last_name": "Khan",
+          "email": "vik.khan22@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "US",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-27 06:07:06",
+          "last_activity": "2026-09-23 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Vik Khan",
+          "photo": "https://www.gravatar.com/avatar/0555d9d6c9a45c3b66664ac720dac589?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FVik%2BKhan/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "22",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "22",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "22",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Wen",
+          "last_name": "Costa",
+          "email": "wen.costa23@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-10-03 11:45:48",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Wen Costa",
+          "photo": "https://www.gravatar.com/avatar/351c079b8c5476c7c1839ede88f24fe1?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FWen%2BCosta/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "23",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "23",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "23",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "23",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Xan",
+          "last_name": "Gray",
+          "email": "xan.gray24@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-18 08:04:20",
+          "last_activity": "2026-09-13 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Xan Gray",
+          "photo": "https://www.gravatar.com/avatar/76db3c03d8af1cd098907af9d896f730?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FXan%2BGray/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "24",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "24",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "24",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Yara",
+          "last_name": "Hale",
+          "email": "yara.hale25@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "JP",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-25 12:06:57",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Yara Hale",
+          "photo": "https://www.gravatar.com/avatar/adbfbb218f97551d30d05171daf9fb6b?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FYara%2BHale/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "25",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "25",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "25",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "25",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "25",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ava",
+          "last_name": "Jones",
+          "email": "ava.jones26@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-12 11:50:14",
+          "last_activity": "2026-10-09 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Ava Jones",
+          "photo": "https://www.gravatar.com/avatar/6aca9034bb39b46e242dedb3da0fd43b?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FAva%2BJones/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "26",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "26",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 1,
+              "title": "VIP",
+              "slug": "vip",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "26",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "26",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ben",
+          "last_name": "Gray",
+          "email": "ben.gray27@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-27 13:30:05",
+          "last_activity": "2026-10-02 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Ben Gray",
+          "photo": "https://www.gravatar.com/avatar/1fb9b4098cfa1d5d362db6ce407f370a?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FBen%2BGray/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "27",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "27",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Chloe",
+          "last_name": "Park",
+          "email": "chloe.park28@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "AU",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-22 04:22:51",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Chloe Park",
+          "photo": "https://www.gravatar.com/avatar/06659e4da458fc83d9bd6818a5f0a0d5?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FChloe%2BPark/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "28",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "28",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Dev",
+          "last_name": "Okafor",
+          "email": "dev.okafor29@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-27 04:52:58",
+          "last_activity": "2026-09-27 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Dev Okafor",
+          "photo": "https://www.gravatar.com/avatar/b50450ff5b7fe0f33d475cf6a6e297bf?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FDev%2BOkafor/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "29",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "29",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "29",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "29",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Elif",
+          "last_name": "Hale",
+          "email": "elif.hale30@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-13 06:31:39",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Elif Hale",
+          "photo": "https://www.gravatar.com/avatar/d1f293eace89204d0a559d3eebd32699?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FElif%2BHale/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "30",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "30",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Femi",
+          "last_name": "Brook",
+          "email": "femi.brook31@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "bounced",
+          "contact_type": "lead",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-09 01:34:20",
+          "last_activity": "2026-09-25 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "full_name": "Femi Brook",
+          "photo": "https://www.gravatar.com/avatar/ab0afe31f863657738a33bfa8edc1d62?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FFemi%2BBrook/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "31",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "31",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            },
+            {
+              "id": 1,
+              "title": "VIP",
+              "slug": "vip",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "31",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:19+00:00",
+                "updated_at": "2026-10-12T01:34:19+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 32,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Gita",
+          "last_name": "Tan",
+          "email": "gita.tan32@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "unsubscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-10-01 02:28:37",
+          "last_activity": "2026-09-26 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Gita Tan",
+          "photo": "https://www.gravatar.com/avatar/855659185c2edf0e60d069497935425c?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FGita%2BTan/128",
+          "tags": [
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "32",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "32",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 33,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Hugo",
+          "last_name": "Lopez",
+          "email": "hugo.lopez33@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "AU",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-25 11:40:10",
+          "last_activity": "2026-09-23 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Hugo Lopez",
+          "photo": "https://www.gravatar.com/avatar/9c62730c3e741363d79bae61d173443b?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FHugo%2BLopez/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "33",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 1,
+              "title": "VIP",
+              "slug": "vip",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "33",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "33",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Ines",
+          "last_name": "Moss",
+          "email": "ines.moss34@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-23 00:07:04",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Ines Moss",
+          "photo": "https://www.gravatar.com/avatar/1c4bcc3ba739f297f452d330d83e5e19?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FInes%2BMoss/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "34",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "34",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Jon",
+          "last_name": "Moss",
+          "email": "jon.moss35@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "bounced",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-07 20:45:37",
+          "last_activity": "2026-09-19 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Jon Moss",
+          "photo": "https://www.gravatar.com/avatar/6383271f47e4a8d385f98c3a8143ec7c?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FJon%2BMoss/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "35",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 36,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Kai",
+          "last_name": "Tan",
+          "email": "kai.tan36@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "AU",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "unsubscribed",
+          "contact_type": "lead",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-24 07:53:19",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Kai Tan",
+          "photo": "https://www.gravatar.com/avatar/1bf9c3bacb088e4e1e1f1ddbcd5c784c?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FKai%2BTan/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "36",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "36",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": []
+        },
+        {
+          "id": 37,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Lena",
+          "last_name": "Brook",
+          "email": "lena.brook37@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-25 03:47:25",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Lena Brook",
+          "photo": "https://www.gravatar.com/avatar/aaf8f1ba574266aed15a1c898a50f082?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FLena%2BBrook/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "37",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "37",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "37",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Mo",
+          "last_name": "Nair",
+          "email": "mo.nair38@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-03 04:33:40",
+          "last_activity": "2026-09-23 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Mo Nair",
+          "photo": "https://www.gravatar.com/avatar/af3c219947ef8d02d282055ee5ee7d6f?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FMo%2BNair/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "38",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "38",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "38",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "38",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "38",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Nia",
+          "last_name": "Ellis",
+          "email": "nia.ellis39@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-10-06 08:26:35",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Nia Ellis",
+          "photo": "https://www.gravatar.com/avatar/b10347ea610c489d8add71a29ed20cd5?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FNia%2BEllis/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "39",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "39",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "39",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Omar",
+          "last_name": "Khan",
+          "email": "omar.khan40@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "customer",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-14 08:47:33",
+          "last_activity": "2026-09-28 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Omar Khan",
+          "photo": "https://www.gravatar.com/avatar/bf29de590174051009b9a46d5c172172?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FOmar%2BKhan/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "40",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "40",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "40",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Pia",
+          "last_name": "Dane",
+          "email": "pia.dane41@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-24 22:35:37",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Pia Dane",
+          "photo": "https://www.gravatar.com/avatar/7813438a6cbeeaeb4a0425881b1b9ac1?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FPia%2BDane/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "41",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "41",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "41",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Quinn",
+          "last_name": "Park",
+          "email": "quinn.park42@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "AU",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-10-08 17:32:39",
+          "last_activity": "2026-09-20 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Quinn Park",
+          "photo": "https://www.gravatar.com/avatar/c9d52f66818d24c8b2dc5ba585cbd22c?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FQuinn%2BPark/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 1,
+              "title": "VIP",
+              "slug": "vip",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "42",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Rui",
+          "last_name": "Silva",
+          "email": "rui.silva43@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-06-18 08:06:49",
+          "last_activity": "2026-09-20 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Rui Silva",
+          "photo": "https://www.gravatar.com/avatar/e4dde2d01bc6f0d8a1641da133734d92?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FRui%2BSilva/128",
+          "tags": [
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "43",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "43",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Sana",
+          "last_name": "Khan",
+          "email": "sana.khan44@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "IN",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "customer",
+          "source": "form",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-19 05:12:40",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Sana Khan",
+          "photo": "https://www.gravatar.com/avatar/58218dd8114421d9876376fb498f83c8?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FSana%2BKhan/128",
+          "tags": [
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "44",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "44",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "44",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Tom",
+          "last_name": "Lopez",
+          "email": "tom.lopez45@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-09 17:49:49",
+          "last_activity": null,
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Tom Lopez",
+          "photo": "https://www.gravatar.com/avatar/cc768ac3f4d01393d1fc11809b75668d?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FTom%2BLopez/128",
+          "tags": [
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "45",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Uma",
+          "last_name": "Khan",
+          "email": "uma.khan46@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "BR",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "referral",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-12 14:07:36",
+          "last_activity": "2026-09-22 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Uma Khan",
+          "photo": "https://www.gravatar.com/avatar/6648a11d6881f661be66647321aa44c2?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FUma%2BKhan/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "46",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "int:pricing",
+              "slug": "int-pricing",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "46",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 5,
+              "title": "src:referral",
+              "slug": "src-referral",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "46",
+                "object_id": "5",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "46",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "46",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Vik",
+          "last_name": "Park",
+          "email": "vik.park47@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "DE",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "pending",
+          "contact_type": "lead",
+          "source": "import",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-10 20:46:03",
+          "last_activity": "2026-10-03 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Vik Park",
+          "photo": "https://www.gravatar.com/avatar/50bca11d2790b2b97b004c8345e36293?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FVik%2BPark/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "47",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "47",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "47",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 2,
+              "title": "Product updates",
+              "slug": "product-updates",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "47",
+                "object_id": "2",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Wen",
+          "last_name": "Ellis",
+          "email": "wen.ellis48@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-09-06 21:52:56",
+          "last_activity": "2026-09-23 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Wen Ellis",
+          "photo": "https://www.gravatar.com/avatar/09257d05a5f6f71d7fa26265b55d34d4?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FWen%2BEllis/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "48",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "48",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Xan",
+          "last_name": "Moss",
+          "email": "xan.moss49@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "US",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "lead",
+          "source": "webinar",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-08-02 11:08:50",
+          "last_activity": "2026-10-07 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Xan Moss",
+          "photo": "https://www.gravatar.com/avatar/2749d3e57e5eecb89367bec1f6e013ed?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FXan%2BMoss/128",
+          "tags": [
+            {
+              "id": 6,
+              "title": "stage:lead",
+              "slug": "stage-lead",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "49",
+                "object_id": "6",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "49",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "user_id": null,
+          "hash": "redacted",
+          "contact_owner": null,
+          "company_id": null,
+          "prefix": null,
+          "first_name": "Yara",
+          "last_name": "Khan",
+          "email": "yara.khan50@example.com",
+          "timezone": null,
+          "address_line_1": null,
+          "address_line_2": null,
+          "postal_code": null,
+          "city": null,
+          "state": null,
+          "country": "GB",
+          "ip": null,
+          "latitude": null,
+          "longitude": null,
+          "total_points": "0",
+          "life_time_value": "0",
+          "phone": null,
+          "status": "subscribed",
+          "contact_type": "customer",
+          "source": "web",
+          "avatar": null,
+          "date_of_birth": null,
+          "created_at": "2026-07-06 12:08:01",
+          "last_activity": "2026-09-28 01:34:19",
+          "updated_at": "2026-10-12 01:34:20",
+          "full_name": "Yara Khan",
+          "photo": "https://www.gravatar.com/avatar/f80fe699fb3bd217d651089460be19a6?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FYara%2BKhan/128",
+          "tags": [
+            {
+              "id": 3,
+              "title": "int:hosting",
+              "slug": "int-hosting",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "50",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 4,
+              "title": "src:webinar-2026-09",
+              "slug": "src-webinar-2026-09",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "50",
+                "object_id": "4",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 7,
+              "title": "stage:customer",
+              "slug": "stage-customer",
+              "description": null,
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "50",
+                "object_id": "7",
+                "object_type": "FluentCrm\\App\\Models\\Tag",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ],
+          "lists": [
+            {
+              "id": 1,
+              "title": "Newsletter",
+              "slug": "newsletter",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "50",
+                "object_id": "1",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            },
+            {
+              "id": 3,
+              "title": "Webinar attendees",
+              "slug": "webinar-attendees",
+              "description": null,
+              "is_public": "0",
+              "created_at": "2026-10-12 01:34:19",
+              "updated_at": "2026-10-12 01:34:19",
+              "pivot": {
+                "subscriber_id": "50",
+                "object_id": "3",
+                "object_type": "FluentCrm\\App\\Models\\Lists",
+                "created_at": "2026-10-12T01:34:20+00:00",
+                "updated_at": "2026-10-12T01:34:20+00:00"
+              }
+            }
+          ]
+        }
+      ],
+      "first_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/?page=1",
+      "from": 1,
+      "last_page": 1,
+      "last_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/?page=1",
+      "links": [
+        {
+          "url": null,
+          "label": "pagination.previous",
+          "active": false
+        },
+        {
+          "url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "pagination.next",
+          "active": false
+        }
+      ],
+      "next_page_url": null,
+      "path": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers",
+      "per_page": 100,
+      "prev_page_url": null,
+      "to": 50,
+      "total": 50
+    },
+    "custom": null
+  }
+}

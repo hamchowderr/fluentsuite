@@ -1,0 +1,150 @@
+{
+  "route": "GET subscribers/<id>/notes?per_page=3&page=1",
+  "status": 200,
+  "body": {
+    "notes": {
+      "current_page": 1,
+      "data": [
+        {
+          "id": 8,
+          "subscriber_id": "38",
+          "parent_id": null,
+          "created_by": "1",
+          "status": "open",
+          "type": "call",
+          "is_private": "1",
+          "title": "Needs migration help",
+          "description": "<p>Fictional note for testing.</p>",
+          "created_at": "2026-10-12 01:34:20",
+          "updated_at": "2026-10-12 01:34:20",
+          "added_by": {
+            "ID": 1,
+            "display_name": "admin",
+            "photo": "https://www.gravatar.com/avatar/650f7cfc2bbb1d383bbc4daeca23d43e?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2Fadmin/128"
+          }
+        }
+      ],
+      "first_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/38/notes/?page=1",
+      "from": 1,
+      "last_page": 1,
+      "last_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/38/notes/?page=1",
+      "links": [
+        {
+          "url": null,
+          "label": "pagination.previous",
+          "active": false
+        },
+        {
+          "url": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/38/notes/?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "pagination.next",
+          "active": false
+        }
+      ],
+      "next_page_url": null,
+      "path": "https://crm.example.test/wp-json/fluent-crm/v2/subscribers/38/notes",
+      "per_page": 3,
+      "prev_page_url": null,
+      "to": 1,
+      "total": 1
+    },
+    "fields": {
+      "fields": {
+        "type": {
+          "type": "input-option",
+          "label": "Type",
+          "id": "fc_note_type",
+          "name": "type",
+          "options": [
+            {
+              "id": "note",
+              "label": "Note"
+            },
+            {
+              "id": "call",
+              "label": "Call"
+            },
+            {
+              "id": "email",
+              "label": "Email"
+            },
+            {
+              "id": "meeting",
+              "label": "Meeting"
+            },
+            {
+              "id": "quote_sent",
+              "label": "Quote: Sent"
+            },
+            {
+              "id": "quote_accepted",
+              "label": "Quote: Accepted"
+            },
+            {
+              "id": "quote_refused",
+              "label": "Quote: Refused"
+            },
+            {
+              "id": "invoice_sent",
+              "label": "Invoice: Sent"
+            },
+            {
+              "id": "invoice_part_paid",
+              "label": "Invoice: Part Paid"
+            },
+            {
+              "id": "invoice_paid",
+              "label": "Invoice: Paid"
+            },
+            {
+              "id": "invoice_refunded",
+              "label": "Invoice: Refunded"
+            },
+            {
+              "id": "transaction",
+              "label": "Transaction"
+            },
+            {
+              "id": "feedback",
+              "label": "Feedback"
+            },
+            {
+              "id": "tweet",
+              "label": "Tweet"
+            },
+            {
+              "id": "facebook_post",
+              "label": "Facebook Post"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "input-date",
+          "data_type": "datetime",
+          "name": "created_at",
+          "label": "Date Time",
+          "id": "fc_note_title",
+          "value_format": "YYYY-MM-DD HH:mm:ss",
+          "help": "keep blank for current time"
+        },
+        "title": {
+          "type": "input-text",
+          "name": "title",
+          "label": "Title",
+          "id": "fc_note_title",
+          "placeholder": "Your Note Title"
+        },
+        "description": {
+          "type": "wp-editor",
+          "name": "description",
+          "label": "Description",
+          "id": "fc_note_desc"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "fluentsuite",
+  "project_id": "b8e976a7-0764-4fd2-87b2-b4b69dbc1190"
+}

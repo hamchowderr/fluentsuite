@@ -1,0 +1,55 @@
+{
+  "fixtures": [
+    {
+      "match": {
+        "toolCallId": "toolu_profile_1",
+        "toolResultContains": "Email stats: 12 sent, 7 opened, 2 clicked"
+      },
+      "response": {
+        "content": "Jane Doe is a subscribed customer tagged VIP. She opened 7 of 12 emails and recently asked about annual pricing."
+      }
+    },
+    {
+      "match": {
+        "toolCallId": "toolu_profile_2",
+        "toolResultContains": "not_found"
+      },
+      "response": {
+        "content": "There is no contact with that email in FluentCRM."
+      }
+    },
+    {
+      "match": {
+        "userMessage": "What do we know about jane.doe@example.test?",
+        "toolName": "crm_contact_profile"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_profile_1",
+            "name": "crm_contact_profile",
+            "arguments": {
+              "email": "jane.doe@example.test"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "match": {
+        "userMessage": "Look up nobody@example.test"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_profile_2",
+            "name": "crm_contact_profile",
+            "arguments": {
+              "email": "nobody@example.test"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

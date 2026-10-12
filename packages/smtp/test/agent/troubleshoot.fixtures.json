@@ -1,0 +1,28 @@
+{
+  "fixtures": [
+    {
+      "match": { "toolCallId": "toolu_detail_1", "toolResultContains": "wp-login.php?[masked]" },
+      "response": {
+        "content": "Emails fail because the SMTP host refuses connections. The failed password reset was addressed to Ava Thompson; its reset link is masked."
+      }
+    },
+    {
+      "match": { "toolCallId": "toolu_report_1", "toolResultContains": "Failure reasons:" },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_detail_1",
+            "name": "smtp_email_detail",
+            "arguments": { "id": 37, "include_body": true }
+          }
+        ]
+      }
+    },
+    {
+      "match": { "userMessage": "Why are our emails failing?", "toolName": "smtp_delivery_report" },
+      "response": {
+        "toolCalls": [{ "id": "toolu_report_1", "name": "smtp_delivery_report", "arguments": {} }]
+      }
+    }
+  ]
+}

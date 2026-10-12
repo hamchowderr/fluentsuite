@@ -1,0 +1,36 @@
+{
+  "name": "@fluentsuite/smtp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FluentSuite module for FluentSMTP: task-shaped MCP tools (through the FluentSuite Bridge plugin). Not affiliated with WPManageNinja.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@fluentsuite/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "fluentsuite-smtp": "./dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "ui-dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:ui && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:ui": "node ../core/scripts/build-views.mjs ui-dist ../core/ui/action-preview.ts"
+  },
+  "dependencies": {
+    "@fluentsuite/core": "workspace:*",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@copilotkit/aimock": "1.45.0",
+    "@modelcontextprotocol/client": "2.3.1"
+  }
+}

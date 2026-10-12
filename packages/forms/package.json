@@ -1,0 +1,35 @@
+{
+  "name": "@fluentsuite/forms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FluentSuite module for Fluent Forms: task-shaped MCP tools with privacy rules for entries. Not affiliated with WPManageNinja.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@fluentsuite/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "fluentsuite-forms": "./dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "skills"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fluentsuite/core": "workspace:*",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@copilotkit/aimock": "1.45.0",
+    "@modelcontextprotocol/client": "2.3.1",
+    "@fluentsuite/crm": "workspace:*"
+  }
+}

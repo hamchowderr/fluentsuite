@@ -1,0 +1,9 @@
+{
+  "route": "GET campaigns/<id>/overview_stats",
+  "status": 200,
+  "body": {
+    "sent_count": 0,
+    "stat": [],
+    "analytics": []
+  }
+}

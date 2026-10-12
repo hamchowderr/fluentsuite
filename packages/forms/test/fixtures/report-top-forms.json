@@ -1,0 +1,29 @@
+{
+  "route": "GET report/top-performing-forms?start_date=2026-07-01&end_date=2026-10-12&metric=entries",
+  "status": 200,
+  "body": {
+    "top_performing_forms": [
+      {
+        "id": 6,
+        "title": "Donation (test)",
+        "value": 7
+      },
+      {
+        "id": 5,
+        "title": "Event registration (test)",
+        "value": 11
+      },
+      {
+        "id": 4,
+        "title": "Newsletter signup (test)",
+        "value": 16
+      },
+      {
+        "id": 3,
+        "title": "Contact (test)",
+        "value": 20
+      }
+    ],
+    "disable_message": ""
+  }
+}

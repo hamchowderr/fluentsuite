@@ -1,0 +1,130 @@
+{
+  "route": "GET subscribers/0?get_by_email=<email>&with[]=stats&with[]=subscriber.custom_values",
+  "status": 200,
+  "body": {
+    "subscriber": {
+      "id": 50,
+      "user_id": null,
+      "hash": "redacted",
+      "contact_owner": null,
+      "company_id": null,
+      "prefix": null,
+      "first_name": "Yara",
+      "last_name": "Khan",
+      "email": "yara.khan50@example.com",
+      "timezone": null,
+      "address_line_1": null,
+      "address_line_2": null,
+      "postal_code": null,
+      "city": null,
+      "state": null,
+      "country": "GB",
+      "ip": null,
+      "latitude": null,
+      "longitude": null,
+      "total_points": "0",
+      "life_time_value": "0",
+      "phone": null,
+      "status": "subscribed",
+      "contact_type": "customer",
+      "source": "web",
+      "avatar": null,
+      "date_of_birth": "",
+      "created_at": "2026-07-06 12:08:01",
+      "last_activity": "2026-09-28 01:34:19",
+      "updated_at": "2026-10-12 01:34:20",
+      "stats": {
+        "emails": 0,
+        "opens": 0,
+        "clicks": 0
+      },
+      "custom_values": {
+        "plan": "Agency",
+        "company_size": "1-10"
+      },
+      "full_name": "Yara Khan",
+      "photo": "https://www.gravatar.com/avatar/f80fe699fb3bd217d651089460be19a6?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FYara%2BKhan/128",
+      "tags": [
+        {
+          "id": 3,
+          "title": "int:hosting",
+          "slug": "int-hosting",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "pivot": {
+            "subscriber_id": "50",
+            "object_id": "3",
+            "object_type": "FluentCrm\\App\\Models\\Tag",
+            "created_at": "2026-10-12T01:34:20+00:00",
+            "updated_at": "2026-10-12T01:34:20+00:00"
+          }
+        },
+        {
+          "id": 4,
+          "title": "src:webinar-2026-09",
+          "slug": "src-webinar-2026-09",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "pivot": {
+            "subscriber_id": "50",
+            "object_id": "4",
+            "object_type": "FluentCrm\\App\\Models\\Tag",
+            "created_at": "2026-10-12T01:34:20+00:00",
+            "updated_at": "2026-10-12T01:34:20+00:00"
+          }
+        },
+        {
+          "id": 7,
+          "title": "stage:customer",
+          "slug": "stage-customer",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "pivot": {
+            "subscriber_id": "50",
+            "object_id": "7",
+            "object_type": "FluentCrm\\App\\Models\\Tag",
+            "created_at": "2026-10-12T01:34:20+00:00",
+            "updated_at": "2026-10-12T01:34:20+00:00"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "id": 1,
+          "title": "Newsletter",
+          "slug": "newsletter",
+          "description": null,
+          "is_public": "0",
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "pivot": {
+            "subscriber_id": "50",
+            "object_id": "1",
+            "object_type": "FluentCrm\\App\\Models\\Lists",
+            "created_at": "2026-10-12T01:34:20+00:00",
+            "updated_at": "2026-10-12T01:34:20+00:00"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Webinar attendees",
+          "slug": "webinar-attendees",
+          "description": null,
+          "is_public": "0",
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "pivot": {
+            "subscriber_id": "50",
+            "object_id": "3",
+            "object_type": "FluentCrm\\App\\Models\\Lists",
+            "created_at": "2026-10-12T01:34:20+00:00",
+            "updated_at": "2026-10-12T01:34:20+00:00"
+          }
+        }
+      ]
+    }
+  }
+}

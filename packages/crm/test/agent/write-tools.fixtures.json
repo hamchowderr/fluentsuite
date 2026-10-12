@@ -1,0 +1,41 @@
+{
+  "fixtures": [
+    {
+      "match": {
+        "toolCallId": "toolu_tag_apply",
+        "toolResultContains": "Done. 1 contact updated."
+      },
+      "response": { "content": "Done: Yara Khan is now tagged VIP." }
+    },
+    {
+      "match": {
+        "toolCallId": "toolu_tag_preview",
+        "toolResultContains": "DRY RUN, nothing changed yet."
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_tag_apply",
+            "name": "crm_tag_contacts",
+            "arguments": { "emails": ["yara.khan50@example.com"], "add": ["VIP"], "dry_run": false }
+          }
+        ]
+      }
+    },
+    {
+      "match": {
+        "userMessage": "Tag yara.khan50@example.com as VIP",
+        "toolName": "crm_tag_contacts"
+      },
+      "response": {
+        "toolCalls": [
+          {
+            "id": "toolu_tag_preview",
+            "name": "crm_tag_contacts",
+            "arguments": { "emails": ["yara.khan50@example.com"], "add": ["VIP"] }
+          }
+        ]
+      }
+    }
+  ]
+}

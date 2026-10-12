@@ -1,0 +1,17 @@
+{
+  "route": "GET report/revenue-chart?start_date=2026-07-01&end_date=2026-10-12",
+  "status": 200,
+  "body": {
+    "revenue_chart": {
+      "dates": ["Jul 2026", "Aug 2026", "Sep 2026", "Oct 2026"],
+      "currency_sign": "&#36;",
+      "currency": "USD",
+      "values": {
+        "paid": [0, 0, 100, 50],
+        "pending": [0, 0, 0, 0],
+        "refunded": [0, 0, 0, 0],
+        "payments": [0, 0, 100, 50]
+      }
+    }
+  }
+}

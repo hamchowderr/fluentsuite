@@ -1,0 +1,23 @@
+{
+  "1532": [
+    {
+      "id": 88,
+      "subscriber_id": 1532,
+      "parent_id": null,
+      "created_by": 1,
+      "status": "open",
+      "type": "call",
+      "is_private": 1,
+      "title": "Call recap: asked about annual pricing",
+      "description": "<p>Wants a quote for 3 sites.</p>",
+      "created_at": "2026-10-01 14:00:00",
+      "updated_at": "2026-10-01 14:00:00",
+      "added_by": {
+        "ID": 1,
+        "first_name": "Admin",
+        "last_name": "",
+        "display_name": "admin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "route": "GET report/overview-chart?start_date=2026-07-01&end_date=2026-10-12",
+  "status": 200,
+  "body": {
+    "overview_chart": {
+      "dates": ["Jul 2026", "Aug 2026", "Sep 2026", "Oct 2026"],
+      "values": {
+        "submissions": [4, 16, 29, 12],
+        "read": [3, 9, 17, 7],
+        "unread": [1, 5, 9, 3],
+        "spam": [0, 0, 0, 0],
+        "trashed": [0, 2, 3, 2]
+      }
+    }
+  }
+}

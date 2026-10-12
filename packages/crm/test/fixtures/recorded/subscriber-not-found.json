@@ -1,0 +1,7 @@
+{
+  "route": "GET subscribers/0?get_by_email=nobody@example.com",
+  "status": 422,
+  "body": {
+    "message": "Subscriber not found"
+  }
+}

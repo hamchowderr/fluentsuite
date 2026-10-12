@@ -1,0 +1,27 @@
+{
+  "name": "fluentsuite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FluentSuite: one MCP server for the Fluent WordPress plugins. Products are switched on by config. Not affiliated with WPManageNinja.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "fluentsuite": "./dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fluentsuite/core": "workspace:*",
+    "@fluentsuite/crm": "workspace:*",
+    "@fluentsuite/smtp": "workspace:*",
+    "@fluentsuite/forms": "workspace:*"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1"
+  }
+}

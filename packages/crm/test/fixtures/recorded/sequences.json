@@ -1,0 +1,81 @@
+{
+  "route": "GET sequences?per_page=5&with[]=stats",
+  "status": 200,
+  "body": {
+    "sequences": {
+      "current_page": 1,
+      "data": [
+        {
+          "id": 2,
+          "parent_id": null,
+          "type": "email_sequence",
+          "title": "New lead nurture (test)",
+          "available_urls": null,
+          "slug": "new-lead-nurture-test",
+          "status": "draft",
+          "template_id": null,
+          "email_subject": null,
+          "email_pre_header": null,
+          "email_body": "",
+          "recipients_count": 0,
+          "delay": "0",
+          "utm_status": "0",
+          "utm_source": null,
+          "utm_medium": null,
+          "utm_campaign": null,
+          "utm_term": null,
+          "utm_content": null,
+          "design_template": "simple",
+          "scheduled_at": null,
+          "settings": {
+            "mailer_settings": {
+              "from_name": "",
+              "from_email": "",
+              "reply_to_name": "",
+              "reply_to_email": "",
+              "is_custom": "no"
+            }
+          },
+          "created_by": "2",
+          "created_at": "2026-10-12 02:03:50",
+          "updated_at": "2026-10-12 02:03:50",
+          "stats": {
+            "emails": 2,
+            "subscribers": 0,
+            "revenue": {
+              "amount": "0",
+              "currency": ""
+            }
+          }
+        }
+      ],
+      "first_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/sequences/?page=1",
+      "from": 1,
+      "last_page": 1,
+      "last_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/sequences/?page=1",
+      "links": [
+        {
+          "url": null,
+          "label": "pagination.previous",
+          "active": false
+        },
+        {
+          "url": "https://crm.example.test/wp-json/fluent-crm/v2/sequences/?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "pagination.next",
+          "active": false
+        }
+      ],
+      "next_page_url": null,
+      "path": "https://crm.example.test/wp-json/fluent-crm/v2/sequences",
+      "per_page": 5,
+      "prev_page_url": null,
+      "to": 1,
+      "total": 1
+    }
+  }
+}

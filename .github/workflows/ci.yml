@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, typecheck, build, test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Lint PHP (FluentSuite Bridge and test-site scripts)
+        run: find wordpress scripts/test-site/remote -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Build
+        run: pnpm build
+      - name: Install Chromium for the MCP Apps browser tests
+        run: pnpm --filter @fluentsuite/crm exec playwright-core install --with-deps chromium
+      - name: Test (server, agent and end-to-end)
+        run: pnpm test
+        env:
+          CI: "true"

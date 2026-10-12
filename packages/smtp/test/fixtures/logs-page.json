@@ -1,0 +1,696 @@
+{
+  "route": "GET smtp/logs?per_page=100&page=1",
+  "status": 200,
+  "body": {
+    "total": 38,
+    "per_page": 100,
+    "current_page": 1,
+    "last_page": 1,
+    "data": [
+      {
+        "id": 38,
+        "created_at": "2026-10-12 03:04:44",
+        "status": "failed",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <wordpress@example.com>",
+        "subject": "Your verification code",
+        "source": "WordPress",
+        "provider": "Smtp",
+        "retries": 0,
+        "resent_count": 0,
+        "error": "SMTP Error: Could not connect to SMTP host. Connection refused (111)"
+      },
+      {
+        "id": 37,
+        "created_at": "2026-10-12 03:04:44",
+        "status": "failed",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <wordpress@example.com>",
+        "subject": "Password reset for your account",
+        "source": "WordPress",
+        "provider": "Smtp",
+        "retries": 0,
+        "resent_count": 0,
+        "error": "SMTP Error: Could not connect to SMTP host. Connection refused (111)"
+      },
+      {
+        "id": 1,
+        "created_at": "2026-10-12 01:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 2,
+        "created_at": "2026-10-11 16:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "liam.carter@example.com",
+            "name": "Liam Carter"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1001",
+        "source": "FluentCart",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 3,
+        "created_at": "2026-10-11 06:53:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "mia.rossi@example.com",
+            "name": "Mia Rossi"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 4,
+        "created_at": "2026-10-10 21:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "noah.patel@example.com",
+            "name": "Noah Patel"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 5,
+        "created_at": "2026-10-10 11:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "zoe.kim@example.com",
+            "name": "Zoe Kim"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 6,
+        "created_at": "2026-10-10 02:23:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "ethan.brooks@example.com",
+            "name": "Ethan Brooks"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 7,
+        "created_at": "2026-10-09 16:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "isla.novak@example.com",
+            "name": "Isla Novak"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1006",
+        "source": "FluentCart",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 8,
+        "created_at": "2026-10-09 07:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "lucas.moreau@example.com",
+            "name": "Lucas Moreau"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 9,
+        "created_at": "2026-10-08 21:53:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 10,
+        "created_at": "2026-10-08 12:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "liam.carter@example.com",
+            "name": "Liam Carter"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 11,
+        "created_at": "2026-10-08 02:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "mia.rossi@example.com",
+            "name": "Mia Rossi"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 12,
+        "created_at": "2026-10-07 17:23:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "noah.patel@example.com",
+            "name": "Noah Patel"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1011",
+        "source": "FluentCart",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 13,
+        "created_at": "2026-10-07 07:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "zoe.kim@example.com",
+            "name": "Zoe Kim"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 14,
+        "created_at": "2026-10-06 22:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ethan.brooks@example.com",
+            "name": "Ethan Brooks"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 15,
+        "created_at": "2026-10-06 12:53:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "isla.novak@example.com",
+            "name": "Isla Novak"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 16,
+        "created_at": "2026-10-06 03:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "lucas.moreau@example.com",
+            "name": "Lucas Moreau"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 17,
+        "created_at": "2026-10-05 17:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1016",
+        "source": "FluentCart",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 18,
+        "created_at": "2026-10-05 08:23:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "liam.carter@example.com",
+            "name": "Liam Carter"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 19,
+        "created_at": "2026-10-04 22:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "mia.rossi@example.com",
+            "name": "Mia Rossi"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 20,
+        "created_at": "2026-10-04 13:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "noah.patel@example.com",
+            "name": "Noah Patel"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 21,
+        "created_at": "2026-10-04 03:53:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "zoe.kim@example.com",
+            "name": "Zoe Kim"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 22,
+        "created_at": "2026-10-03 18:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ethan.brooks@example.com",
+            "name": "Ethan Brooks"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1021",
+        "source": "FluentCart",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 23,
+        "created_at": "2026-10-03 08:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "isla.novak@example.com",
+            "name": "Isla Novak"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 24,
+        "created_at": "2026-10-02 23:23:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "lucas.moreau@example.com",
+            "name": "Lucas Moreau"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 25,
+        "created_at": "2026-10-02 13:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 26,
+        "created_at": "2026-10-02 04:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "liam.carter@example.com",
+            "name": "Liam Carter"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 27,
+        "created_at": "2026-10-01 18:53:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "mia.rossi@example.com",
+            "name": "Mia Rossi"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1026",
+        "source": "FluentCart",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 28,
+        "created_at": "2026-10-01 09:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "noah.patel@example.com",
+            "name": "Noah Patel"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 29,
+        "created_at": "2026-09-30 23:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "zoe.kim@example.com",
+            "name": "Zoe Kim"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 30,
+        "created_at": "2026-09-30 14:23:40",
+        "status": "failed",
+        "to": [
+          {
+            "email": "ethan.brooks@example.com",
+            "name": "Ethan Brooks"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Smtp",
+        "retries": 2,
+        "resent_count": 0,
+        "error": "SMTP Error: The following recipients failed: 550 5.1.1 mailbox unavailable"
+      },
+      {
+        "id": 31,
+        "created_at": "2026-09-30 04:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "isla.novak@example.com",
+            "name": "Isla Novak"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 32,
+        "created_at": "2026-09-29 19:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "lucas.moreau@example.com",
+            "name": "Lucas Moreau"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Your order receipt #1031",
+        "source": "FluentCart",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 33,
+        "created_at": "2026-09-29 09:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "ava.thompson@example.com",
+            "name": "Ava Thompson"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Password reset request",
+        "source": "WordPress",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 34,
+        "created_at": "2026-09-29 00:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "liam.carter@example.com",
+            "name": "Liam Carter"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "We received your message",
+        "source": "Fluent Forms",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 35,
+        "created_at": "2026-09-28 14:53:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "mia.rossi@example.com",
+            "name": "Mia Rossi"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Booking confirmed for Friday",
+        "source": "FluentBooking",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      },
+      {
+        "id": 36,
+        "created_at": "2026-09-28 05:23:40",
+        "status": "sent",
+        "to": [
+          {
+            "email": "noah.patel@example.com",
+            "name": "Noah Patel"
+          }
+        ],
+        "from": "FluentSuite Test <noreply@example.com>",
+        "subject": "Welcome to the newsletter",
+        "source": "FluentCRM",
+        "provider": "Simulator",
+        "retries": 0,
+        "resent_count": 0,
+        "error": null
+      }
+    ]
+  }
+}

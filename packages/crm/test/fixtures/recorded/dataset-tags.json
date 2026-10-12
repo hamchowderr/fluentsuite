@@ -1,0 +1,119 @@
+{
+  "route": "GET tags?per_page=500",
+  "status": 200,
+  "body": {
+    "tags": {
+      "current_page": 1,
+      "data": [
+        {
+          "id": 3,
+          "title": "int:hosting",
+          "slug": "int-hosting",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 5
+        },
+        {
+          "id": 2,
+          "title": "int:pricing",
+          "slug": "int-pricing",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 15
+        },
+        {
+          "id": 5,
+          "title": "src:referral",
+          "slug": "src-referral",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 5
+        },
+        {
+          "id": 4,
+          "title": "src:webinar-2026-09",
+          "slug": "src-webinar-2026-09",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 7
+        },
+        {
+          "id": 8,
+          "title": "stage:churned",
+          "slug": "stage-churned",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 0
+        },
+        {
+          "id": 7,
+          "title": "stage:customer",
+          "slug": "stage-customer",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 12
+        },
+        {
+          "id": 6,
+          "title": "stage:lead",
+          "slug": "stage-lead",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 22
+        },
+        {
+          "id": 9,
+          "title": "tmp:winback-2026-q4",
+          "slug": "tmp-winback-2026-q4",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 0
+        },
+        {
+          "id": 1,
+          "title": "VIP",
+          "slug": "vip",
+          "description": null,
+          "created_at": "2026-10-12 01:34:19",
+          "updated_at": "2026-10-12 01:34:19",
+          "subscribersCount": 3
+        }
+      ],
+      "first_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/tags/?page=1",
+      "from": 1,
+      "last_page": 1,
+      "last_page_url": "https://crm.example.test/wp-json/fluent-crm/v2/tags/?page=1",
+      "links": [
+        {
+          "url": null,
+          "label": "pagination.previous",
+          "active": false
+        },
+        {
+          "url": "https://crm.example.test/wp-json/fluent-crm/v2/tags/?page=1",
+          "label": "1",
+          "active": true
+        },
+        {
+          "url": null,
+          "label": "pagination.next",
+          "active": false
+        }
+      ],
+      "next_page_url": null,
+      "path": "https://crm.example.test/wp-json/fluent-crm/v2/tags",
+      "per_page": 500,
+      "prev_page_url": null,
+      "to": 9,
+      "total": 9
+    }
+  }
+}

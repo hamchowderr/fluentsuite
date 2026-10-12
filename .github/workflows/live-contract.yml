@@ -1,0 +1,44 @@
+name: Live contract
+
+# Runs the read-only live contract tests against the FluentSuite test site (fictional data).
+# Manual, plus nightly. Skips cleanly when the secrets are not set.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    name: Read-only tools against the test site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FLUENTSUITE_LIVE_SITE_URL: ${{ secrets.FLUENTSUITE_LIVE_SITE_URL }}
+      FLUENTSUITE_LIVE_WP_USER: ${{ secrets.FLUENTSUITE_LIVE_WP_USER }}
+      FLUENTSUITE_LIVE_APP_PASSWORD: ${{ secrets.FLUENTSUITE_LIVE_APP_PASSWORD }}
+    steps:
+      - name: Check secrets
+        id: secrets
+        run: |
+          if [ -n "$FLUENTSUITE_LIVE_SITE_URL" ] && [ -n "$FLUENTSUITE_LIVE_WP_USER" ] && [ -n "$FLUENTSUITE_LIVE_APP_PASSWORD" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Live contract secrets are not set; skipping. See docs/test-site.md."
+          fi
+      - if: steps.secrets.outputs.ready == 'true'
+        uses: actions/checkout@v4
+      - if: steps.secrets.outputs.ready == 'true'
+        uses: pnpm/action-setup@v4
+      - if: steps.secrets.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - if: steps.secrets.outputs.ready == 'true'
+        run: pnpm install --frozen-lockfile
+      - if: steps.secrets.outputs.ready == 'true'
+        name: Live contract tests
+        run: pnpm vitest run packages/crm/test/live packages/smtp/test/live packages/forms/test/live

@@ -1,0 +1,9 @@
+{
+  "route": "GET campaigns/<id>/link-report",
+  "status": 200,
+  "body": {
+    "links": [],
+    "click_status": true,
+    "open_status": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "route": "GET campaigns/<id>",
+  "status": 200,
+  "body": {
+    "campaign": {
+      "id": 1,
+      "parent_id": null,
+      "type": "campaign",
+      "title": "October product update (test)",
+      "available_urls": null,
+      "slug": "october-product-update-test",
+      "status": "draft",
+      "template_id": null,
+      "email_subject": "What is new this October",
+      "email_pre_header": "Fictional test campaign",
+      "email_body": "<p>Hello {{contact.first_name}}, this is a fictional test campaign.</p>",
+      "recipients_count": 0,
+      "delay": "0",
+      "utm_status": "0",
+      "utm_source": null,
+      "utm_medium": null,
+      "utm_campaign": null,
+      "utm_term": null,
+      "utm_content": null,
+      "design_template": "simple",
+      "scheduled_at": null,
+      "settings": {
+        "footer_settings": {
+          "disable_footer": "no",
+          "custom_footer": "no",
+          "footer_content": "",
+          "font_size": 13,
+          "font_color": "#202020",
+          "background_color": "transparent",
+          "footer_padding": 20
+        },
+        "template_config": {
+          "content_width": 700,
+          "content_border_radius": "0px",
+          "content_padding_top": "20px",
+          "content_padding_right": "20px",
+          "content_padding_bottom": "20px",
+          "content_padding_left": "20px",
+          "content_margin_top": "20px",
+          "content_margin_bottom": "20px",
+          "headings_font_family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+          "content_font_family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+          "body_bg_color": "#FAFAFA",
+          "content_bg_color": "#FFFFFF",
+          "headings_color": "#202020",
+          "text_color": "#202020",
+          "link_color": "#0693e3",
+          "link_color_hover": "",
+          "paragraph_font_size": "16px",
+          "paragraph_line_height": "1.5",
+          "footer_text_color": "#202020",
+          "design_template": "simple",
+          "disable_footer": "no"
+        },
+        "mailer_settings": {
+          "from_name": "",
+          "from_email": "",
+          "reply_to_name": "",
+          "reply_to_email": "",
+          "is_custom": "no"
+        }
+      },
+      "created_by": "1",
+      "created_at": "2026-10-12 01:34:20",
+      "updated_at": "2026-10-12 01:34:20",
+      "server_time": "2026-10-12 02:20:30"
+    },
+    "templates": []
+  }
+}

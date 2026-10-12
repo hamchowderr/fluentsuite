@@ -1,0 +1,276 @@
+{
+  "route": "GET reports/dashboard-stats",
+  "status": 200,
+  "body": {
+    "stats": {
+      "total_subscribers": {
+        "title": "Active Contacts",
+        "count": 34,
+        "route": {
+          "name": "subscribers"
+        }
+      },
+      "total_campaigns": {
+        "title": "Campaigns",
+        "count": 1,
+        "route": {
+          "name": "campaigns"
+        }
+      },
+      "email_sent": {
+        "title": "Emails Sent",
+        "count": 0,
+        "route": {
+          "name": "all_emails"
+        }
+      },
+      "total_automations": {
+        "title": "Active Automations",
+        "count": 0,
+        "route": {
+          "name": "funnels"
+        }
+      }
+    },
+    "sales": [],
+    "dashboard_notices": [
+      "<div>The FluentCRM Pro license needs to be activated. <a href=\"https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/settings/license_management\">Click here to activate</a></div>"
+    ],
+    "onboarding": {
+      "total": 5,
+      "completed": 3,
+      "steps": [
+        {
+          "label": "Create a Tag",
+          "completed": true,
+          "route": {
+            "name": "tags"
+          }
+        },
+        {
+          "label": "Import Contacts",
+          "completed": true,
+          "route": {
+            "name": "subscribers"
+          }
+        },
+        {
+          "label": "Create a Campaign",
+          "completed": true,
+          "route": {
+            "name": "campaigns"
+          }
+        },
+        {
+          "label": "Create an Automation",
+          "completed": false,
+          "route": {
+            "name": "funnels"
+          }
+        },
+        {
+          "label": "Create a Form",
+          "completed": false,
+          "route": {
+            "name": "forms"
+          }
+        }
+      ]
+    },
+    "quick_links": [
+      {
+        "title": "Contact Segments",
+        "url": "https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/contact-groups/lists",
+        "icon": "ContactSegments"
+      },
+      {
+        "title": "Recurring Campaigns",
+        "url": "https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/email/recurring-campaigns",
+        "icon": "RecurringCampaigns"
+      },
+      {
+        "title": "Email Sequences",
+        "url": "https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/email/sequences",
+        "icon": "EmailSequences"
+      },
+      {
+        "title": "MCP for AI Agents",
+        "url": "https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/settings/mcp_settings",
+        "icon": "el-icon-connection"
+      },
+      {
+        "title": "Documentations",
+        "url": "https://crm.example.test/wp-admin/admin.php?page=fluentcrm-admin#/documentation",
+        "icon": "Documentations"
+      },
+      {
+        "title": "Video Tutorials (Free)",
+        "url": "https://www.youtube.com/playlist?list=PLXpD0vT4thWG-ZPeM6cco7BS5cJY9bTjL",
+        "icon": "VideoTutorials",
+        "is_external": true
+      }
+    ],
+    "ff_config": {
+      "is_installed": false,
+      "create_form_link": "https://crm.example.test/wp-admin/admin.php?page=fluent_forms#add=1"
+    },
+    "recommendation": false,
+    "system_tips": "",
+    "recent_contacts": [
+      {
+        "id": 3,
+        "user_id": null,
+        "hash": "redacted",
+        "contact_owner": null,
+        "company_id": null,
+        "prefix": null,
+        "first_name": "Chloe",
+        "last_name": "Hale",
+        "email": "chloe.hale3@example.com",
+        "timezone": null,
+        "address_line_1": null,
+        "address_line_2": null,
+        "postal_code": null,
+        "city": null,
+        "state": null,
+        "country": "US",
+        "ip": null,
+        "latitude": null,
+        "longitude": null,
+        "total_points": "0",
+        "life_time_value": "0",
+        "phone": null,
+        "status": "subscribed",
+        "contact_type": "lead",
+        "source": "webinar",
+        "avatar": null,
+        "date_of_birth": null,
+        "created_at": "2026-10-11 01:12:16",
+        "last_activity": "2026-09-27 01:34:19",
+        "updated_at": "2026-10-12 01:34:19",
+        "full_name": "Chloe Hale",
+        "photo": "https://www.gravatar.com/avatar/15a1f5f7e9c7fef057e8f7ce99baa436?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FChloe%2BHale/128"
+      },
+      {
+        "id": 42,
+        "user_id": null,
+        "hash": "redacted",
+        "contact_owner": null,
+        "company_id": null,
+        "prefix": null,
+        "first_name": "Quinn",
+        "last_name": "Park",
+        "email": "quinn.park42@example.com",
+        "timezone": null,
+        "address_line_1": null,
+        "address_line_2": null,
+        "postal_code": null,
+        "city": null,
+        "state": null,
+        "country": "AU",
+        "ip": null,
+        "latitude": null,
+        "longitude": null,
+        "total_points": "0",
+        "life_time_value": "0",
+        "phone": null,
+        "status": "subscribed",
+        "contact_type": "customer",
+        "source": "form",
+        "avatar": null,
+        "date_of_birth": null,
+        "created_at": "2026-10-08 17:32:39",
+        "last_activity": "2026-09-20 01:34:19",
+        "updated_at": "2026-10-12 01:34:20",
+        "full_name": "Quinn Park",
+        "photo": "https://www.gravatar.com/avatar/c9d52f66818d24c8b2dc5ba585cbd22c?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FQuinn%2BPark/128"
+      },
+      {
+        "id": 39,
+        "user_id": null,
+        "hash": "redacted",
+        "contact_owner": null,
+        "company_id": null,
+        "prefix": null,
+        "first_name": "Nia",
+        "last_name": "Ellis",
+        "email": "nia.ellis39@example.com",
+        "timezone": null,
+        "address_line_1": null,
+        "address_line_2": null,
+        "postal_code": null,
+        "city": null,
+        "state": null,
+        "country": "BR",
+        "ip": null,
+        "latitude": null,
+        "longitude": null,
+        "total_points": "0",
+        "life_time_value": "0",
+        "phone": null,
+        "status": "subscribed",
+        "contact_type": "lead",
+        "source": "form",
+        "avatar": null,
+        "date_of_birth": null,
+        "created_at": "2026-10-06 08:26:35",
+        "last_activity": null,
+        "updated_at": "2026-10-12 01:34:20",
+        "full_name": "Nia Ellis",
+        "photo": "https://www.gravatar.com/avatar/b10347ea610c489d8add71a29ed20cd5?s=128&d=https%3A%2F%2Fui-avatars.com%2Fapi%2FNia%2BEllis/128"
+      }
+    ],
+    "active_automations": [],
+    "recent_campaigns": [],
+    "triggers": {
+      "user_register": {
+        "category": "WordPress Triggers",
+        "label": "New User Sign Up",
+        "description": "This Funnel will be initiated when a new user has been registered in your site",
+        "icon": "fc-icon-wp_new_user_signup"
+      },
+      "wp_login": {
+        "category": "WordPress Triggers",
+        "label": "User Login",
+        "description": "This Funnel will be initiated when a user login to your site",
+        "icon": "fc-icon-wp_new_user_signup"
+      },
+      "fluentcrm_contact_added_to_lists": {
+        "category": "CRM",
+        "label": "List Applied",
+        "description": "This will run when selected lists have been applied to a contact",
+        "icon": "fc-icon-list_applied_2"
+      },
+      "fluentcrm_contact_removed_from_lists": {
+        "category": "CRM",
+        "label": "List Removed",
+        "description": "This will run when selected lists have been removed from a contact",
+        "icon": "fc-icon-list_removed"
+      },
+      "fluentcrm_contact_added_to_tags": {
+        "category": "CRM",
+        "label": "Tag Applied",
+        "description": "This will run when selected tags have been applied to a contact",
+        "icon": "fc-icon-tag_applied"
+      },
+      "fluentcrm_contact_removed_from_tags": {
+        "category": "CRM",
+        "label": "Tag Removed",
+        "description": "This will run when selected Tags have been removed from a contact",
+        "icon": "fc-icon-tag_removed"
+      },
+      "fluentcrm_contact_birthday": {
+        "category": "CRM",
+        "label": "Contact's Birthday",
+        "description": "Funnel will be initiated on the day of contact's birthday",
+        "element-icon": "Present"
+      },
+      "fluent_crm/contact_created": {
+        "category": "CRM",
+        "label": "Contact Created",
+        "description": "This will run when a new contact will be added",
+        "element-icon": "User"
+      }
+    }
+  }
+}
