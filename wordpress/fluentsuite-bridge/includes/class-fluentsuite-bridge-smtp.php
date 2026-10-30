@@ -15,10 +15,15 @@
  *   only to the email's original recipients, and only for emails whose status is `failed`.
  * - Deleting needs a criterion (ids, one recipient, or an age); there is no "delete all".
  * - Stored values are unserialized with allowed_classes=false.
- * - Every query is prepared.
+ * - Every query is prepared: the table through %i, every value through a placeholder. WHERE clauses built from
+ *   filters hold placeholders only.
  */
 
 defined('ABSPATH') || exit;
+
+// FluentSMTP keeps its logs in its own table and offers no PHP API for them, so these are direct queries, and live
+// logs are not cached. Clauses built from filters hold placeholders only, which the sniffs can't follow.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
 
 final class FluentSuite_Bridge_Smtp
 {
@@ -142,7 +147,7 @@ final class FluentSuite_Bridge_Smtp
         $table = self::table();
         global $wpdb;
         $weekAgo = gmdate('Y-m-d H:i:s', current_time('timestamp') - 7 * DAY_IN_SECONDS);
-        $last = $wpdb->get_row("SELECT * FROM {$table} WHERE status = 'failed' ORDER BY created_at DESC, id DESC LIMIT 1", ARRAY_A);
+        $last = $wpdb->get_row($wpdb->prepare("SELECT * FROM %i WHERE status = 'failed' ORDER BY created_at DESC, id DESC LIMIT 1", $table), ARRAY_A);
 
         return rest_ensure_response([
             'bridge'      => [
@@ -161,8 +166,8 @@ final class FluentSuite_Bridge_Smtp
                 'retention_days' => isset($misc['log_saved_interval_days']) ? (int) $misc['log_saved_interval_days'] : null,
             ],
             'connections' => self::connections($settings, $misc),
-            'totals'      => self::counts(''),
-            'last_7_days' => self::counts($wpdb->prepare('WHERE created_at >= %s', $weekAgo)),
+            'totals'      => self::counts('', []),
+            'last_7_days' => self::counts('WHERE created_at >= %s', [$weekAgo]),
             'last_failure' => $last ? self::row($last) : null,
         ]);
     }
@@ -178,10 +183,9 @@ final class FluentSuite_Bridge_Smtp
         $perPage = (int) $request['per_page'];
         $page = (int) $request['page'];
 
-        $countSql = "SELECT COUNT(*) FROM {$table} {$where}";
-        $total = (int) $wpdb->get_var($args ? $wpdb->prepare($countSql, $args) : $countSql);
-        $listSql = "SELECT * FROM {$table} {$where} ORDER BY created_at DESC, id DESC LIMIT %d OFFSET %d";
-        $rows = $wpdb->get_results($wpdb->prepare($listSql, array_merge($args, [$perPage, ($page - 1) * $perPage])), ARRAY_A);
+        // $where holds only placeholders (filters()); every value is bound here.
+        $total = (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i {$where}", array_merge([$table], $args))); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+        $rows = $wpdb->get_results($wpdb->prepare("SELECT * FROM %i {$where} ORDER BY created_at DESC, id DESC LIMIT %d OFFSET %d", array_merge([$table], $args, [$perPage, ($page - 1) * $perPage])), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
         return rest_ensure_response([
             'total'        => $total,
@@ -199,7 +203,7 @@ final class FluentSuite_Bridge_Smtp
         }
         global $wpdb;
         $table = self::table();
-        $raw = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$table} WHERE id = %d", (int) $request['id']), ARRAY_A);
+        $raw = $wpdb->get_row($wpdb->prepare('SELECT * FROM %i WHERE id = %d', $table, (int) $request['id']), ARRAY_A);
         if (!$raw) {
             return new WP_Error('fluentsuite_not_found', 'No logged email with that id.', ['status' => 404]);
         }
@@ -284,7 +288,7 @@ final class FluentSuite_Bridge_Smtp
         $logger = new \FluentMail\App\Models\Logger();
         $results = [];
         foreach ($ids as $id) {
-            $status = $wpdb->get_var($wpdb->prepare("SELECT status FROM {$table} WHERE id = %d", $id));
+            $status = $wpdb->get_var($wpdb->prepare('SELECT status FROM %i WHERE id = %d', $table, $id));
             if ($status === null) {
                 $results[] = ['id' => $id, 'status' => 'skipped', 'error' => 'No logged email with that id.'];
                 continue;
@@ -307,7 +311,7 @@ final class FluentSuite_Bridge_Smtp
                 $error = $e->getMessage();
             }
             remove_action('wp_mail_failed', $catch);
-            $now = $wpdb->get_var($wpdb->prepare("SELECT status FROM {$table} WHERE id = %d", $id));
+            $now = $wpdb->get_var($wpdb->prepare('SELECT status FROM %i WHERE id = %d', $table, $id));
             $results[] = [
                 'id'     => $id,
                 'status' => $error === null && $now === 'sent' ? 'sent' : 'failed',
@@ -352,8 +356,9 @@ final class FluentSuite_Bridge_Smtp
             $where[] = 'status = %s';
             $args[] = $request['status'];
         }
-        $sql = "SELECT * FROM {$table} WHERE " . implode(' AND ', $where) . ' ORDER BY created_at DESC, id DESC LIMIT 5001';
-        $rows = $wpdb->get_results($wpdb->prepare($sql, $args), ARRAY_A) ?: [];
+        // $where holds only placeholders; every value is bound here.
+        $sql = 'SELECT * FROM %i WHERE ' . implode(' AND ', $where) . ' ORDER BY created_at DESC, id DESC LIMIT 5001';
+        $rows = $wpdb->get_results($wpdb->prepare($sql, array_merge([$table], $args)), ARRAY_A) ?: []; // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
         if ($request['to']) {
             $email = strtolower($request['to']);
             $rows = array_values(array_filter($rows, function ($raw) use ($email) {
@@ -386,9 +391,9 @@ final class FluentSuite_Bridge_Smtp
         foreach (array_chunk(array_map(function ($r) {
             return (int) $r['id'];
         }, $rows), 500) as $chunk) {
-            $deleted += (int) $wpdb->query($wpdb->prepare(
-                "DELETE FROM {$table} WHERE id IN (" . implode(',', array_fill(0, count($chunk), '%d')) . ')',
-                $chunk
+            $deleted += (int) $wpdb->query($wpdb->prepare( // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- one %d placeholder per id.
+                'DELETE FROM %i WHERE id IN (' . implode(',', array_fill(0, count($chunk), '%d')) . ')',
+                array_merge([$table], $chunk)
             ));
         }
         return rest_ensure_response(['dry_run' => false, 'deleted' => $deleted]);
@@ -410,10 +415,11 @@ final class FluentSuite_Bridge_Smtp
         if (strtotime($before) - strtotime($after) > 366 * DAY_IN_SECONDS) {
             return new WP_Error('fluentsuite_invalid_range', 'The range can be at most 366 days.', ['status' => 400]);
         }
-        $range = $wpdb->prepare('WHERE created_at BETWEEN %s AND %s', $after . ' 00:00:00', $before . ' 23:59:59');
+        $from = $after . ' 00:00:00';
+        $to = $before . ' 23:59:59';
 
         $days = [];
-        foreach ($wpdb->get_results("SELECT DATE(created_at) AS d, status, COUNT(*) AS n FROM {$table} {$range} GROUP BY d, status ORDER BY d", ARRAY_A) ?: [] as $r) {
+        foreach ($wpdb->get_results($wpdb->prepare('SELECT DATE(created_at) AS d, status, COUNT(*) AS n FROM %i WHERE created_at BETWEEN %s AND %s GROUP BY d, status ORDER BY d', $table, $from, $to), ARRAY_A) ?: [] as $r) {
             if (!isset($days[$r['d']])) {
                 $days[$r['d']] = ['date' => $r['d'], 'sent' => 0, 'failed' => 0];
             }
@@ -423,7 +429,7 @@ final class FluentSuite_Bridge_Smtp
         }
 
         $sources = [];
-        foreach ($wpdb->get_results("SELECT source, status, COUNT(*) AS n FROM {$table} {$range} GROUP BY source, status", ARRAY_A) ?: [] as $r) {
+        foreach ($wpdb->get_results($wpdb->prepare('SELECT source, status, COUNT(*) AS n FROM %i WHERE created_at BETWEEN %s AND %s GROUP BY source, status', $table, $from, $to), ARRAY_A) ?: [] as $r) {
             $name = $r['source'] !== null && $r['source'] !== '' ? $r['source'] : '(unknown)';
             if (!isset($sources[$name])) {
                 $sources[$name] = ['source' => $name, 'sent' => 0, 'failed' => 0];
@@ -440,7 +446,7 @@ final class FluentSuite_Bridge_Smtp
 
         // Failure reasons are grouped from the most recent 2,000 failures in the range.
         $reasons = [];
-        $failed = $wpdb->get_results("SELECT id, response, created_at FROM {$table} {$range} AND status = 'failed' ORDER BY created_at DESC, id DESC LIMIT 2000", ARRAY_A) ?: [];
+        $failed = $wpdb->get_results($wpdb->prepare("SELECT id, response, created_at FROM %i WHERE created_at BETWEEN %s AND %s AND status = 'failed' ORDER BY created_at DESC, id DESC LIMIT 2000", $table, $from, $to), ARRAY_A) ?: [];
         foreach ($failed as $r) {
             $message = self::message(self::unserialize($r['response']));
             $message = $message !== null ? $message : '(no error recorded)';
@@ -457,7 +463,7 @@ final class FluentSuite_Bridge_Smtp
         return rest_ensure_response([
             'after'           => $after,
             'before'          => $before,
-            'totals'          => self::counts($range),
+            'totals'          => self::counts('WHERE created_at BETWEEN %s AND %s', [$from, $to]),
             'days'            => array_values($days),
             'sources'         => array_slice($sources, 0, 20),
             'failure_reasons' => array_slice($reasons, 0, 20),
@@ -549,12 +555,13 @@ final class FluentSuite_Bridge_Smtp
         return [$where ? 'WHERE ' . implode(' AND ', $where) : '', $args];
     }
 
-    private static function counts($where)
+    /** Sent and failed counts. $where is a WHERE clause with placeholders only; $args are its values. */
+    private static function counts($where, array $args)
     {
         global $wpdb;
-        $table = self::table();
         $out = ['sent' => 0, 'failed' => 0];
-        foreach ($wpdb->get_results("SELECT status, COUNT(*) AS n FROM {$table} {$where} GROUP BY status", ARRAY_A) ?: [] as $r) {
+        $sql = "SELECT status, COUNT(*) AS n FROM %i {$where} GROUP BY status";
+        foreach ($wpdb->get_results($wpdb->prepare($sql, array_merge([self::table()], $args)), ARRAY_A) ?: [] as $r) { // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
             if (isset($out[$r['status']])) {
                 $out[$r['status']] = (int) $r['n'];
             }
