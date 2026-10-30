@@ -6,6 +6,12 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- FluentSuite Bridge 0.2.1: every database query binds the table name and values through `$wpdb->prepare()` (identifier
+  placeholders, WordPress 6.2+) instead of pre-built SQL fragments, found by Plugin Check; checked against FluentSMTP
+  2.4.1 on WordPress 7.1.3. The bridge now has a `readme.txt`.
+
 ### Added
 
 - Fluent Forms write tools: `forms_update_entries` (read/unread, favorites, trash/restore; token for bulk, bound
