@@ -147,10 +147,12 @@ describe("config", () => {
         FLUENTSUITE_WRITES: "true",
         FLUENTSUITE_PRODUCTS: "crm, smtp",
         FLUENTSUITE_HTTP_PORT: "8080",
+        FLUENTSUITE_TOOLS: "crm_contact_profile, crm_find_contacts",
       },
     });
     expect(config.writes.enabled).toBe(true);
     expect(config.products).toEqual(["crm", "smtp"]);
+    expect(config.tools).toEqual(["crm_contact_profile", "crm_find_contacts"]);
     expect(config.http.port).toBe(8080);
   });
 

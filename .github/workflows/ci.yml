@@ -39,3 +39,32 @@ jobs:
         run: pnpm test
         env:
           CI: "true"
+
+  docker:
+    name: Docker image
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: docker build -t fluentsuite:ci .
+      - name: Refuses HTTP off loopback without a token
+        run: |
+          if docker run --rm \
+            -e FLUENTSUITE_SITE_URL=https://crm.example.test \
+            -e FLUENTSUITE_WP_USER=ci -e FLUENTSUITE_WP_APP_PASSWORD=ci-password \
+            fluentsuite:ci; then
+            echo "::error::the container started without FLUENTSUITE_HTTP_TOKEN"; exit 1
+          fi
+      - name: Answers /healthz with a token set
+        run: |
+          docker run -d --name fs -p 3333:3333 \
+            -e FLUENTSUITE_SITE_URL=https://crm.example.test \
+            -e FLUENTSUITE_WP_USER=ci -e FLUENTSUITE_WP_APP_PASSWORD=ci-password \
+            -e FLUENTSUITE_HTTP_TOKEN=ci-token-0123456789abcdefghijkl \
+            fluentsuite:ci
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:3333/healthz; then exit 0; fi
+            sleep 1
+          done
+          docker logs fs; exit 1

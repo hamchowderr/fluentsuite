@@ -105,6 +105,27 @@ several instances behind a load balancer; set the same `FLUENTSUITE_CONFIRM_SECR
 Put it behind HTTPS (a reverse proxy) and add the public host name to
 `FLUENTSUITE_HTTP_ALLOWED_HOSTS`.
 
+### Docker
+
+The `Dockerfile` builds the whole server and runs it in HTTP mode on port 3333 as a non-root
+user, with a health check on `/healthz`:
+
+```sh
+docker build -t fluentsuite .
+docker run -d -p 3333:3333 \
+  -e FLUENTSUITE_SITE_URL=https://your-site.example \
+  -e FLUENTSUITE_WP_USER=your-wordpress-username \
+  -e FLUENTSUITE_WP_APP_PASSWORD="xxxx xxxx xxxx xxxx xxxx xxxx" \
+  -e FLUENTSUITE_HTTP_TOKEN="$(openssl rand -hex 32)" \
+  -e FLUENTSUITE_HTTP_ALLOWED_HOSTS=mcp.your-site.example \
+  -e FLUENTSUITE_CONFIRM_SECRET="$(openssl rand -hex 32)" \
+  fluentsuite
+```
+
+The image listens on `0.0.0.0`, so it refuses to start without `FLUENTSUITE_HTTP_TOKEN`. Any
+platform that builds from a Dockerfile can run it; terminate HTTPS in front of it. Writes, sending,
+products and the tool allowlist are set with the variables below.
+
 ## Configuration
 
 Environment variables, or a JSON file passed with `--config` / `FLUENTSUITE_CONFIG`
@@ -116,8 +137,10 @@ Environment variables, or a JSON file passed with `--config` / `FLUENTSUITE_CONF
 | `FLUENTSUITE_WP_USER` | required | WordPress username |
 | `FLUENTSUITE_WP_APP_PASSWORD` | required | Application Password for that user |
 | `FLUENTSUITE_PRODUCTS` | `crm` | Comma-separated products to serve: `crm`, `smtp`, `forms` |
+| `FLUENTSUITE_TOOLS` | all | Comma-separated tools to serve, e.g. `crm_contact_profile,crm_find_contacts`. The writes and sending switches still apply on top; an unknown name stops the server at startup. |
 | `FLUENTSUITE_WRITES` | `false` | Allow write tools. Off means read-only. |
 | `FLUENTSUITE_ALLOW_SENDING` | `false` | Allow tools that send email: `crm_send_campaign`, `smtp_send_test_email`, `smtp_resend_failed_emails`. Needs writes on too. |
+| `FLUENTSUITE_UPSERT_TAGS_LISTS` | `true` | Let `crm_upsert_contact` add tags and lists. `false` removes both from its input and refuses calls that send them, so contact adds can't start tag- or list-triggered automations. |
 | `FLUENTSUITE_FORMS_REDACT_FIELDS` | none | Extra field-name words whose Fluent Forms entry values always show `[redacted]` (comma-separated, on top of the built-in list) |
 | `FLUENTSUITE_BULK_THRESHOLD` | `10` | Writes touching more records need explicit confirmation |
 | `FLUENTSUITE_CONFIRM_SECRET` | random | HMAC secret for confirmation tokens; set it for multi-instance hosting |

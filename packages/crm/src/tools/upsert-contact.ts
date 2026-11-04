@@ -44,6 +44,12 @@ const Input = z.object({
     .describe(
       "Only for NEW contacts (default subscribed). Existing contacts keep their status; use crm_set_contact_status.",
     ),
+  if_exists: z
+    .enum(["update", "skip", "error"])
+    .default("update")
+    .describe(
+      "When a contact with this email already exists: update it (default), skip it and change nothing, or fail with already_exists. Use error to add contacts without ever changing one.",
+    ),
   ...writeControls,
 });
 
@@ -68,21 +74,47 @@ function currentCustom(c: Subscriber | undefined): Record<string, unknown> {
   return c?.custom_values && !Array.isArray(c.custom_values) ? c.custom_values : {};
 }
 
-export function upsertContactTool(api: FluentCrmApi) {
+/**
+ * Without tags and lists. Strict, so a client that sends them anyway is refused instead of having
+ * them silently dropped.
+ */
+const InputWithoutTagsLists = Input.omit({ tags: true, lists: true }).strict();
+
+export function upsertContactTool(api: FluentCrmApi, options: { tagsLists?: boolean } = {}) {
+  const tagsLists = options.tagsLists ?? true;
   return defineTool({
     name: "crm_upsert_contact",
     title: "Create or update contact",
-    description:
-      "Create a FluentCRM contact, or update the one with this email: name, phone, location, type, source, custom fields, and add tags/lists. Shows a field-by-field preview first. Never sends a double opt-in email; never changes an existing contact's status.",
+    description: `Create a FluentCRM contact, or update the one with this email: name, phone, location, type, source, custom fields${tagsLists ? ", and add tags/lists" : ""}. Shows a field-by-field preview first. Never sends a double opt-in email; never changes an existing contact's status.${tagsLists ? "" : " Tags and lists are turned off on this server."}`,
     kind: "write",
     idempotent: true,
-    input: Input,
+    // The handler reads tags and lists as optional, so it runs unchanged on the narrower schema.
+    input: tagsLists ? Input : (InputWithoutTagsLists as unknown as typeof Input),
     output: Output,
     handler: async (args, ctx) => {
       const [existing, tax] = await Promise.all([
         api.findByEmail(args.email, ctx.signal),
         loadTaxonomies(api, ctx.signal),
       ]);
+      if (existing && args.if_exists === "error") {
+        throw new FluentSuiteError(
+          "already_exists",
+          `A contact with this email already exists (#${existing.id}); nothing was changed.`,
+          { hint: "Look the contact up with crm_contact_profile instead of adding it again." },
+        );
+      }
+      if (existing && args.if_exists === "skip") {
+        const summary = `${args.email} already exists (#${existing.id}); skipped, nothing changed.`;
+        return {
+          text: summary,
+          structured: {
+            status: args.dry_run ? ("preview" as const) : ("applied" as const),
+            action: "none" as const,
+            contact_id: existing.id,
+            changes: [],
+          },
+        };
+      }
       const tags = matchNames(args.tags, tax.tags);
       const lists = matchNames(args.lists, tax.lists);
       requireNoMissing("tag", tags.missing, tax.tags);

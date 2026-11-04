@@ -1,5 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/server";
 import type { FluentSuiteConfig, ProductId } from "./config.js";
+import { FluentSuiteError } from "./errors.js";
 import { createLogger, type Logger } from "./logger.js";
 import { SafetyGuard } from "./safety.js";
 import { registerSkills, type Skill } from "./skills.js";
@@ -97,6 +98,17 @@ export function createServerFactory(options: ServerFactoryOptions): ServerFactor
   });
   const ctx: ProductContext = { config, wp, logger };
   const tools = enabled.flatMap((p) => p.tools(ctx));
+  const allow = config.tools ? new Set(config.tools) : undefined;
+  const unknown = config.tools?.filter((name) => !tools.some((t) => t.name === name)) ?? [];
+  if (unknown.length) {
+    throw new FluentSuiteError(
+      "config_invalid",
+      `Unknown tools in tools (FLUENTSUITE_TOOLS): ${unknown.join(", ")}. Available: ${tools
+        .map((t) => t.name)
+        .sort()
+        .join(", ")}.`,
+    );
+  }
   const views = enabled.flatMap((p) => p.views ?? []);
   const skills = enabled.flatMap((p) => p.skills ?? []);
   const instructions = instructionsFor(enabled, guard);
@@ -106,7 +118,7 @@ export function createServerFactory(options: ServerFactoryOptions): ServerFactor
       { name: SERVER_NAME, version: SERVER_VERSION, title: "FluentSuite" },
       { instructions },
     );
-    registerTools(server, tools, { guard, logger });
+    registerTools(server, tools, { guard, logger, ...(allow ? { allow } : {}) });
     registerViews(server, views);
     if (skills.length) registerSkills(server, skills);
     return server;

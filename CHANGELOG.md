@@ -14,6 +14,15 @@ All notable changes to this project are recorded here. The format follows
 
 ### Added
 
+- `Dockerfile` (Node 22, HTTP mode on port 3333, non-root, `/healthz` health check) with a README "Docker"
+  section, and a CI job that builds the image, checks it refuses to start without a token and answers `/healthz`.
+- `FLUENTSUITE_UPSERT_TAGS_LISTS=false` (`crm.upsertTagsLists`): `crm_upsert_contact` without tags and lists, and
+  calls that send them are refused, since a tag or list can start automations that email the contact.
+- `FLUENTSUITE_TOOLS` (`tools` in the config file): serve only the listed tools, so a deployment for a narrow
+  client never exposes the rest. Writes and sending switches still apply; unknown names fail at startup.
+- `crm_upsert_contact` takes `if_exists`: `update` (default, unchanged behavior), `skip` or `error`. With `error`
+  an existing email fails with the new `already_exists` code in both preview and apply, so a client can add
+  contacts without ever changing one.
 - Fluent Forms write tools: `forms_update_entries` (read/unread, favorites, trash/restore; token for bulk, bound
   to the exact entries), `forms_add_entry_note`, `forms_delete_entries` (ids, trashed and older than N days, or an
   exact email; capped at 200; token bound to the count; says uploaded files go too). The `forms-inbox-triage` skill.

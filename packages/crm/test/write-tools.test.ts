@@ -16,9 +16,13 @@ afterEach(async () => {
   close = undefined;
 });
 
-async function connect(writes: { enabled?: boolean; allowSending?: boolean } = { enabled: true }) {
+async function connect(
+  writes: { enabled?: boolean; allowSending?: boolean } = { enabled: true },
+  extra: Record<string, unknown> = {},
+) {
   const site = createRecordedSite();
   const config = parseConfig({
+    ...extra,
     site: {
       url: site.siteUrl,
       username: "fluentsuite-test",
@@ -64,6 +68,46 @@ describe("tool listing", () => {
     const send = tools.find((t) => t.name === "crm_send_campaign");
     expect(send?.annotations).toMatchObject({ readOnlyHint: false, destructiveHint: true });
     expect(withSending.client.getInstructions()).toContain("Email sending is ENABLED");
+  });
+});
+
+describe("tool allowlist", () => {
+  const AGENT_TOOLS = [
+    "crm_add_contact_note",
+    "crm_contact_profile",
+    "crm_find_contacts",
+    "crm_upsert_contact",
+  ];
+
+  it("serves exactly the listed tools", async () => {
+    const { client } = await connect({ enabled: true }, { tools: AGENT_TOOLS });
+    expect((await client.listTools()).tools.map((t) => t.name)).toEqual(AGENT_TOOLS);
+  });
+
+  it("refuses a call to a tool that is not listed", async () => {
+    const { site, call } = await connect({ enabled: true }, { tools: AGENT_TOOLS });
+    await expect(
+      call("crm_tag_contacts", {
+        emails: ["yara.khan50@example.com"],
+        add: ["stage:lead"],
+        dry_run: false,
+      }),
+    ).rejects.toThrow(/crm_tag_contacts not found/);
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("still leaves listed write tools out while writes are off", async () => {
+    const { client } = await connect({ enabled: false }, { tools: AGENT_TOOLS });
+    expect((await client.listTools()).tools.map((t) => t.name)).toEqual([
+      "crm_contact_profile",
+      "crm_find_contacts",
+    ]);
+  });
+
+  it("fails at boot on an unknown tool name", async () => {
+    await expect(
+      connect({ enabled: true }, { tools: ["crm_contact_profile", "crm_nope"] }),
+    ).rejects.toThrow(/Unknown tools in tools \(FLUENTSUITE_TOOLS\): crm_nope/);
   });
 });
 
@@ -255,6 +299,87 @@ describe("crm_upsert_contact", () => {
     expect(contact(site, email)?.custom_values).toMatchObject({ plan: "Pro" });
     const status = await call("crm_upsert_contact", { email, status: "pending" });
     expect(status.text).toContain("status only applies to new contacts");
+  });
+});
+
+describe("crm_upsert_contact if_exists", () => {
+  const existing = "yara.khan50@example.com";
+
+  it("error refuses an existing contact in preview and apply, writing nothing", async () => {
+    const { site, call } = await connect();
+    for (const dry_run of [true, false]) {
+      const r = await call("crm_upsert_contact", {
+        email: existing,
+        last_name: "Changed",
+        if_exists: "error",
+        dry_run,
+      });
+      expect(r.isError).toBe(true);
+      expect(r.text).toContain("Error (already_exists)");
+    }
+    expect(writes(site)).toHaveLength(0);
+    expect(contact(site, existing)?.last_name).toBe("Khan");
+  });
+
+  it("skip leaves an existing contact unchanged and says so", async () => {
+    const { site, call } = await connect();
+    const r = await call("crm_upsert_contact", {
+      email: existing,
+      last_name: "Changed",
+      if_exists: "skip",
+      dry_run: false,
+    });
+    expect(r.data).toMatchObject({ action: "none", changes: [] });
+    expect(r.text).toContain("skipped");
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("creates a new contact under every value", async () => {
+    const { site, call } = await connect();
+    for (const if_exists of ["update", "skip", "error"]) {
+      const email = `new.${if_exists}@example.com`;
+      const r = await call("crm_upsert_contact", { email, if_exists, dry_run: false });
+      expect(r.data).toMatchObject({ status: "applied", action: "create" });
+      expect(contact(site, email)).toBeDefined();
+    }
+  });
+});
+
+describe("crm_upsert_contact with tags and lists off", () => {
+  const off = { crm: { upsertTagsLists: false } };
+
+  it("has no tags or lists in its input", async () => {
+    const { client } = await connect({ enabled: true }, off);
+    const upsert = (await client.listTools()).tools.find((t) => t.name === "crm_upsert_contact");
+    const props = Object.keys(upsert?.inputSchema.properties ?? {});
+    expect(props).toContain("email");
+    expect(props).not.toContain("tags");
+    expect(props).not.toContain("lists");
+  });
+
+  it("refuses a call that sends tags or lists, writing nothing", async () => {
+    const { site, call } = await connect({ enabled: true }, off);
+    for (const extra of [{ tags: ["stage:lead"] }, { lists: ["Newsletter"] }]) {
+      const attempt = call("crm_upsert_contact", {
+        email: "tagged.lead@example.com",
+        ...extra,
+        dry_run: false,
+      }).then((r) => r.isError);
+      // The SDK rejects input outside the schema, as a protocol error or an error result.
+      await expect(attempt.catch(() => true)).resolves.toBe(true);
+    }
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("still creates a contact without them", async () => {
+    const { site, call } = await connect({ enabled: true }, off);
+    const r = await call("crm_upsert_contact", {
+      email: "plain.lead@example.com",
+      first_name: "Plain",
+      dry_run: false,
+    });
+    expect(r.data).toMatchObject({ status: "applied", action: "create" });
+    expect(contact(site, "plain.lead@example.com")?.tags).toEqual([]);
   });
 });
 
