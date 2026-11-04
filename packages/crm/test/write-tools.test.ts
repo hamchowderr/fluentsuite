@@ -258,6 +258,49 @@ describe("crm_upsert_contact", () => {
   });
 });
 
+describe("crm_upsert_contact if_exists", () => {
+  const existing = "yara.khan50@example.com";
+
+  it("error refuses an existing contact in preview and apply, writing nothing", async () => {
+    const { site, call } = await connect();
+    for (const dry_run of [true, false]) {
+      const r = await call("crm_upsert_contact", {
+        email: existing,
+        last_name: "Changed",
+        if_exists: "error",
+        dry_run,
+      });
+      expect(r.isError).toBe(true);
+      expect(r.text).toContain("Error (already_exists)");
+    }
+    expect(writes(site)).toHaveLength(0);
+    expect(contact(site, existing)?.last_name).toBe("Khan");
+  });
+
+  it("skip leaves an existing contact unchanged and says so", async () => {
+    const { site, call } = await connect();
+    const r = await call("crm_upsert_contact", {
+      email: existing,
+      last_name: "Changed",
+      if_exists: "skip",
+      dry_run: false,
+    });
+    expect(r.data).toMatchObject({ action: "none", changes: [] });
+    expect(r.text).toContain("skipped");
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("creates a new contact under every value", async () => {
+    const { site, call } = await connect();
+    for (const if_exists of ["update", "skip", "error"]) {
+      const email = `new.${if_exists}@example.com`;
+      const r = await call("crm_upsert_contact", { email, if_exists, dry_run: false });
+      expect(r.data).toMatchObject({ status: "applied", action: "create" });
+      expect(contact(site, email)).toBeDefined();
+    }
+  });
+});
+
 describe("crm_add_contact_note", () => {
   it("logs a note as escaped HTML paragraphs", async () => {
     const { site, call } = await connect();

@@ -8,6 +8,7 @@ export type ErrorCode =
   | "auth_failed"
   | "forbidden"
   | "not_found"
+  | "already_exists"
   | "invalid_input"
   | "rate_limited"
   | "upstream_error"

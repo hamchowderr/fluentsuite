@@ -44,6 +44,12 @@ const Input = z.object({
     .describe(
       "Only for NEW contacts (default subscribed). Existing contacts keep their status; use crm_set_contact_status.",
     ),
+  if_exists: z
+    .enum(["update", "skip", "error"])
+    .default("update")
+    .describe(
+      "When a contact with this email already exists: update it (default), skip it and change nothing, or fail with already_exists. Use error to add contacts without ever changing one.",
+    ),
   ...writeControls,
 });
 
@@ -83,6 +89,25 @@ export function upsertContactTool(api: FluentCrmApi) {
         api.findByEmail(args.email, ctx.signal),
         loadTaxonomies(api, ctx.signal),
       ]);
+      if (existing && args.if_exists === "error") {
+        throw new FluentSuiteError(
+          "already_exists",
+          `A contact with this email already exists (#${existing.id}); nothing was changed.`,
+          { hint: "Look the contact up with crm_contact_profile instead of adding it again." },
+        );
+      }
+      if (existing && args.if_exists === "skip") {
+        const summary = `${args.email} already exists (#${existing.id}); skipped, nothing changed.`;
+        return {
+          text: summary,
+          structured: {
+            status: args.dry_run ? ("preview" as const) : ("applied" as const),
+            action: "none" as const,
+            contact_id: existing.id,
+            changes: [],
+          },
+        };
+      }
       const tags = matchNames(args.tags, tax.tags);
       const lists = matchNames(args.lists, tax.lists);
       requireNoMissing("tag", tags.missing, tax.tags);

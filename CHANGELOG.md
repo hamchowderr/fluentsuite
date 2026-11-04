@@ -14,6 +14,9 @@ All notable changes to this project are recorded here. The format follows
 
 ### Added
 
+- `crm_upsert_contact` takes `if_exists`: `update` (default, unchanged behavior), `skip` or `error`. With `error`
+  an existing email fails with the new `already_exists` code in both preview and apply, so a client can add
+  contacts without ever changing one.
 - Fluent Forms write tools: `forms_update_entries` (read/unread, favorites, trash/restore; token for bulk, bound
   to the exact entries), `forms_add_entry_note`, `forms_delete_entries` (ids, trashed and older than N days, or an
   exact email; capped at 200; token bound to the count; says uploaded files go too). The `forms-inbox-triage` skill.

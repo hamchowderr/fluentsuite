@@ -31,7 +31,7 @@ Design rules (see [architecture.md](architecture.md), ADR-004 and ADR-005):
 |---|---|---|---|
 | 9 | `crm_tag_contacts` ✅ | Add and/or remove tags for contacts given by emails or by a segment. Optionally create missing tags. | Dry run; confirmation above the bulk threshold |
 | 10 | `crm_update_list_membership` ✅ | Subscribe or unsubscribe contacts to or from lists, by emails or segment. Never re-subscribes contacts who unsubscribed, bounced or complained. | Dry run; confirmation above the bulk threshold |
-| 11 | `crm_upsert_contact` ✅ | Create a contact or update one found by email: name, fields, custom fields, tags, lists. Never sends a double opt-in email unless asked, and then needs confirmation. | Dry run; shows a field-by-field diff |
+| 11 | `crm_upsert_contact` ✅ | Create a contact or update one found by email: name, fields, custom fields, tags, lists. `if_exists` decides what happens when the email already exists: `update` (default), `skip` (change nothing) or `error` (fail with `already_exists`, for clients that must only add). Never sends a double opt-in email unless asked, and then needs confirmation. | Dry run; shows a field-by-field diff |
 | 12 | `crm_set_contact_status` ✅ | Change global status (subscribed, unsubscribed, pending) for one or more contacts. | Dry run; confirmation for unsubscribes and bulk |
 | 13 | `crm_add_contact_note` ✅ | Log a note, call or meeting on a contact's timeline. | Dry run |
 | 14 | `crm_draft_campaign` ✅ | Create a draft campaign (title, subject, body, audience) and show the audience size. Never sends or schedules. | Dry run; draft only |
