@@ -16,9 +16,13 @@ afterEach(async () => {
   close = undefined;
 });
 
-async function connect(writes: { enabled?: boolean; allowSending?: boolean } = { enabled: true }) {
+async function connect(
+  writes: { enabled?: boolean; allowSending?: boolean } = { enabled: true },
+  extra: Record<string, unknown> = {},
+) {
   const site = createRecordedSite();
   const config = parseConfig({
+    ...extra,
     site: {
       url: site.siteUrl,
       username: "fluentsuite-test",
@@ -64,6 +68,46 @@ describe("tool listing", () => {
     const send = tools.find((t) => t.name === "crm_send_campaign");
     expect(send?.annotations).toMatchObject({ readOnlyHint: false, destructiveHint: true });
     expect(withSending.client.getInstructions()).toContain("Email sending is ENABLED");
+  });
+});
+
+describe("tool allowlist", () => {
+  const AGENT_TOOLS = [
+    "crm_add_contact_note",
+    "crm_contact_profile",
+    "crm_find_contacts",
+    "crm_upsert_contact",
+  ];
+
+  it("serves exactly the listed tools", async () => {
+    const { client } = await connect({ enabled: true }, { tools: AGENT_TOOLS });
+    expect((await client.listTools()).tools.map((t) => t.name)).toEqual(AGENT_TOOLS);
+  });
+
+  it("refuses a call to a tool that is not listed", async () => {
+    const { site, call } = await connect({ enabled: true }, { tools: AGENT_TOOLS });
+    await expect(
+      call("crm_tag_contacts", {
+        emails: ["yara.khan50@example.com"],
+        add: ["stage:lead"],
+        dry_run: false,
+      }),
+    ).rejects.toThrow(/crm_tag_contacts not found/);
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("still leaves listed write tools out while writes are off", async () => {
+    const { client } = await connect({ enabled: false }, { tools: AGENT_TOOLS });
+    expect((await client.listTools()).tools.map((t) => t.name)).toEqual([
+      "crm_contact_profile",
+      "crm_find_contacts",
+    ]);
+  });
+
+  it("fails at boot on an unknown tool name", async () => {
+    await expect(
+      connect({ enabled: true }, { tools: ["crm_contact_profile", "crm_nope"] }),
+    ).rejects.toThrow(/Unknown tools in tools \(FLUENTSUITE_TOOLS\): crm_nope/);
   });
 });
 

@@ -14,6 +14,8 @@ All notable changes to this project are recorded here. The format follows
 
 ### Added
 
+- `FLUENTSUITE_TOOLS` (`tools` in the config file): serve only the listed tools, so a deployment for a narrow
+  client never exposes the rest. Writes and sending switches still apply; unknown names fail at startup.
 - `crm_upsert_contact` takes `if_exists`: `update` (default, unchanged behavior), `skip` or `error`. With `error`
   an existing email fails with the new `already_exists` code in both preview and apply, so a client can add
   contacts without ever changing one.

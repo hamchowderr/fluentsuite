@@ -116,6 +116,7 @@ Environment variables, or a JSON file passed with `--config` / `FLUENTSUITE_CONF
 | `FLUENTSUITE_WP_USER` | required | WordPress username |
 | `FLUENTSUITE_WP_APP_PASSWORD` | required | Application Password for that user |
 | `FLUENTSUITE_PRODUCTS` | `crm` | Comma-separated products to serve: `crm`, `smtp`, `forms` |
+| `FLUENTSUITE_TOOLS` | all | Comma-separated tools to serve, e.g. `crm_contact_profile,crm_find_contacts`. The writes and sending switches still apply on top; an unknown name stops the server at startup. |
 | `FLUENTSUITE_WRITES` | `false` | Allow write tools. Off means read-only. |
 | `FLUENTSUITE_ALLOW_SENDING` | `false` | Allow tools that send email: `crm_send_campaign`, `smtp_send_test_email`, `smtp_resend_failed_emails`. Needs writes on too. |
 | `FLUENTSUITE_FORMS_REDACT_FIELDS` | none | Extra field-name words whose Fluent Forms entry values always show `[redacted]` (comma-separated, on top of the built-in list) |

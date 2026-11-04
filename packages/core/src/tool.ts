@@ -72,16 +72,18 @@ export function errorResult(error: unknown): CallToolResult {
 
 /**
  * Register tools on a server. Write tools are skipped entirely while writes are disabled, so a
- * read-only server never even advertises them. Errors become `isError` results with safe text.
+ * read-only server never even advertises them, and with an allowlist only the listed tools are
+ * registered. Errors become `isError` results with safe text.
  */
 export function registerTools(
   server: McpServer,
   tools: readonly AnyToolDefinition[],
-  deps: { guard: SafetyGuard; logger: Logger },
+  deps: { guard: SafetyGuard; logger: Logger; allow?: ReadonlySet<string> },
 ): string[] {
   const registered: string[] = [];
   const sorted = [...tools].sort((a, b) => a.name.localeCompare(b.name));
   for (const tool of sorted) {
+    if (deps.allow && !deps.allow.has(tool.name)) continue;
     if (tool.kind === "write" && !deps.guard.writesEnabled) continue;
     if (tool.sendsEmail && !deps.guard.sendingEnabled) continue;
     const annotations = {
