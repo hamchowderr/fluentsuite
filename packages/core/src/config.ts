@@ -69,6 +69,15 @@ export const ConfigSchema = z.object({
       allowedHosts: z.array(z.string()).default([]),
     })
     .prefault({}),
+  crm: z
+    .object({
+      /**
+       * Let crm_upsert_contact add tags and lists. Off removes both from its input, so a client can
+       * add contacts without starting the automations a tag or list can trigger.
+       */
+      upsertTagsLists: z.boolean().default(true),
+    })
+    .prefault({}),
   forms: z
     .object({
       /**
@@ -171,6 +180,7 @@ export function configFromEnv(env: Env): Record<string, unknown> {
       token: env.FLUENTSUITE_HTTP_TOKEN,
       allowedHosts: list(env.FLUENTSUITE_HTTP_ALLOWED_HOSTS),
     },
+    crm: { upsertTagsLists: bool(env.FLUENTSUITE_UPSERT_TAGS_LISTS) },
     forms: { redactFields: list(env.FLUENTSUITE_FORMS_REDACT_FIELDS) },
     logLevel: env.FLUENTSUITE_LOG_LEVEL,
   });

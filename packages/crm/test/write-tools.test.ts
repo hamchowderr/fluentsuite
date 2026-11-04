@@ -345,6 +345,44 @@ describe("crm_upsert_contact if_exists", () => {
   });
 });
 
+describe("crm_upsert_contact with tags and lists off", () => {
+  const off = { crm: { upsertTagsLists: false } };
+
+  it("has no tags or lists in its input", async () => {
+    const { client } = await connect({ enabled: true }, off);
+    const upsert = (await client.listTools()).tools.find((t) => t.name === "crm_upsert_contact");
+    const props = Object.keys(upsert?.inputSchema.properties ?? {});
+    expect(props).toContain("email");
+    expect(props).not.toContain("tags");
+    expect(props).not.toContain("lists");
+  });
+
+  it("refuses a call that sends tags or lists, writing nothing", async () => {
+    const { site, call } = await connect({ enabled: true }, off);
+    for (const extra of [{ tags: ["stage:lead"] }, { lists: ["Newsletter"] }]) {
+      const attempt = call("crm_upsert_contact", {
+        email: "tagged.lead@example.com",
+        ...extra,
+        dry_run: false,
+      }).then((r) => r.isError);
+      // The SDK rejects input outside the schema, as a protocol error or an error result.
+      await expect(attempt.catch(() => true)).resolves.toBe(true);
+    }
+    expect(writes(site)).toHaveLength(0);
+  });
+
+  it("still creates a contact without them", async () => {
+    const { site, call } = await connect({ enabled: true }, off);
+    const r = await call("crm_upsert_contact", {
+      email: "plain.lead@example.com",
+      first_name: "Plain",
+      dry_run: false,
+    });
+    expect(r.data).toMatchObject({ status: "applied", action: "create" });
+    expect(contact(site, "plain.lead@example.com")?.tags).toEqual([]);
+  });
+});
+
 describe("crm_add_contact_note", () => {
   it("logs a note as escaped HTML paragraphs", async () => {
     const { site, call } = await connect();

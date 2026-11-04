@@ -28,7 +28,7 @@ export const crmProduct: Product = {
   title: "FluentCRM",
   instructions:
     "Tools prefixed crm_ work with FluentCRM contacts, tags, lists, campaigns and sequences. Look contacts up by exact email when you have it. The crm-* skills describe recommended workflows.",
-  tools: ({ wp }) => {
+  tools: ({ wp, config }) => {
     const api = new FluentCrmApi(wp);
     return [
       contactProfileTool(api),
@@ -42,7 +42,7 @@ export const crmProduct: Product = {
       // Write tools: only listed when writes are enabled. Sending needs writes.allowSending too.
       tagContactsTool(api),
       listMembershipTool(api),
-      upsertContactTool(api),
+      upsertContactTool(api, { tagsLists: config.crm.upsertTagsLists }),
       setContactStatusTool(api),
       addContactNoteTool(api),
       draftCampaignTool(api),

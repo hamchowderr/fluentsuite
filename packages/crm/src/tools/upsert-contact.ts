@@ -74,15 +74,22 @@ function currentCustom(c: Subscriber | undefined): Record<string, unknown> {
   return c?.custom_values && !Array.isArray(c.custom_values) ? c.custom_values : {};
 }
 
-export function upsertContactTool(api: FluentCrmApi) {
+/**
+ * Without tags and lists. Strict, so a client that sends them anyway is refused instead of having
+ * them silently dropped.
+ */
+const InputWithoutTagsLists = Input.omit({ tags: true, lists: true }).strict();
+
+export function upsertContactTool(api: FluentCrmApi, options: { tagsLists?: boolean } = {}) {
+  const tagsLists = options.tagsLists ?? true;
   return defineTool({
     name: "crm_upsert_contact",
     title: "Create or update contact",
-    description:
-      "Create a FluentCRM contact, or update the one with this email: name, phone, location, type, source, custom fields, and add tags/lists. Shows a field-by-field preview first. Never sends a double opt-in email; never changes an existing contact's status.",
+    description: `Create a FluentCRM contact, or update the one with this email: name, phone, location, type, source, custom fields${tagsLists ? ", and add tags/lists" : ""}. Shows a field-by-field preview first. Never sends a double opt-in email; never changes an existing contact's status.${tagsLists ? "" : " Tags and lists are turned off on this server."}`,
     kind: "write",
     idempotent: true,
-    input: Input,
+    // The handler reads tags and lists as optional, so it runs unchanged on the narrower schema.
+    input: tagsLists ? Input : (InputWithoutTagsLists as unknown as typeof Input),
     output: Output,
     handler: async (args, ctx) => {
       const [existing, tax] = await Promise.all([
