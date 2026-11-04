@@ -105,6 +105,27 @@ several instances behind a load balancer; set the same `FLUENTSUITE_CONFIRM_SECR
 Put it behind HTTPS (a reverse proxy) and add the public host name to
 `FLUENTSUITE_HTTP_ALLOWED_HOSTS`.
 
+### Docker
+
+The `Dockerfile` builds the whole server and runs it in HTTP mode on port 3333 as a non-root
+user, with a health check on `/healthz`:
+
+```sh
+docker build -t fluentsuite .
+docker run -d -p 3333:3333 \
+  -e FLUENTSUITE_SITE_URL=https://your-site.example \
+  -e FLUENTSUITE_WP_USER=your-wordpress-username \
+  -e FLUENTSUITE_WP_APP_PASSWORD="xxxx xxxx xxxx xxxx xxxx xxxx" \
+  -e FLUENTSUITE_HTTP_TOKEN="$(openssl rand -hex 32)" \
+  -e FLUENTSUITE_HTTP_ALLOWED_HOSTS=mcp.your-site.example \
+  -e FLUENTSUITE_CONFIRM_SECRET="$(openssl rand -hex 32)" \
+  fluentsuite
+```
+
+The image listens on `0.0.0.0`, so it refuses to start without `FLUENTSUITE_HTTP_TOKEN`. Any
+platform that builds from a Dockerfile can run it; terminate HTTPS in front of it. Writes, sending,
+products and the tool allowlist are set with the variables below.
+
 ## Configuration
 
 Environment variables, or a JSON file passed with `--config` / `FLUENTSUITE_CONFIG`

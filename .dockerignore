@@ -1,0 +1,16 @@
+.git
+.beads
+.claude
+.github
+node_modules
+**/node_modules
+**/dist
+**/ui-dist
+**/*.tsbuildinfo
+coverage
+docs
+scripts/test-site
+wordpress
+.env
+.env.*
+fluentsuite.config.json
