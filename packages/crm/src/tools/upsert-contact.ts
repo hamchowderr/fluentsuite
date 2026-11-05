@@ -7,7 +7,7 @@ import {
 } from "@fluentsuite/core";
 import * as z from "zod/v4";
 import type { FluentCrmApi, Subscriber } from "../api.js";
-import { loadTaxonomies } from "../segment.js";
+import { loadNeededTaxonomies } from "../segment.js";
 import { matchNames, NO_REMARKETING, requireNoMissing } from "../targets.js";
 
 const text = (max: number) => z.string().trim().max(max);
@@ -94,7 +94,11 @@ export function upsertContactTool(api: FluentCrmApi, options: { tagsLists?: bool
     handler: async (args, ctx) => {
       const [existing, tax] = await Promise.all([
         api.findByEmail(args.email, ctx.signal),
-        loadTaxonomies(api, ctx.signal),
+        loadNeededTaxonomies(
+          api,
+          { tags: Boolean(args.tags?.length), lists: Boolean(args.lists?.length) },
+          ctx.signal,
+        ),
       ]);
       if (existing && args.if_exists === "error") {
         throw new FluentSuiteError(

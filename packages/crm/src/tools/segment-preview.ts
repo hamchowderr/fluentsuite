@@ -4,10 +4,10 @@ import type { FluentCrmApi } from "../api.js";
 import {
   collectSegment,
   describeSegment,
-  loadTaxonomies,
   resolveSegment,
   SEGMENT_CAP,
   SegmentSchema,
+  segmentTaxonomies,
 } from "../segment.js";
 import { ACTION_PREVIEW_URI } from "../views.js";
 import { ContactRow, rowLine, toRow } from "./find-contacts.js";
@@ -44,7 +44,7 @@ export function segmentPreviewTool(api: FluentCrmApi) {
     output: SegmentPreview,
     handler: async (args, ctx) => {
       const { sample_size, ...segment } = args;
-      const resolved = resolveSegment(segment, await loadTaxonomies(api, ctx.signal));
+      const resolved = resolveSegment(segment, await segmentTaxonomies(api, segment, ctx.signal));
       const { contacts, matchedBeforeExclusions } = await collectSegment(api, resolved, ctx.signal);
       const preview: SegmentPreview = {
         segment: describeSegment(segment),

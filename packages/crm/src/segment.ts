@@ -49,6 +49,39 @@ export async function loadTaxonomies(api: FluentCrmApi, signal?: AbortSignal): P
   return { tags, lists };
 }
 
+/**
+ * Load only the registries a call names: tags when it names tags, lists when it names lists. A
+ * WordPress user without FluentCRM's tags/lists permission gets 403 on those endpoints, so a plain
+ * search or contact add must not touch them.
+ */
+export async function loadNeededTaxonomies(
+  api: FluentCrmApi,
+  needed: { tags: boolean; lists: boolean },
+  signal?: AbortSignal,
+): Promise<Taxonomies> {
+  const [tags, lists] = await Promise.all([
+    needed.tags ? api.tags(signal) : Promise.resolve([]),
+    needed.lists ? api.lists(signal) : Promise.resolve([]),
+  ]);
+  return { tags, lists };
+}
+
+/** The registries a segment needs, loaded on demand (see loadNeededTaxonomies). */
+export function segmentTaxonomies(
+  api: FluentCrmApi,
+  segment: Segment,
+  signal?: AbortSignal,
+): Promise<Taxonomies> {
+  return loadNeededTaxonomies(
+    api,
+    {
+      tags: Boolean(segment.tags_any?.length || segment.exclude_tags?.length),
+      lists: Boolean(segment.lists_any?.length || segment.exclude_lists?.length),
+    },
+    signal,
+  );
+}
+
 function resolve(
   kind: "tag" | "list",
   wanted: string[] | undefined,

@@ -19,8 +19,25 @@ afterEach(async () => {
 async function connect(
   writes: { enabled?: boolean; allowSending?: boolean } = { enabled: true },
   extra: Record<string, unknown> = {},
+  options: { forbidTaxonomies?: boolean } = {},
 ) {
   const site = createRecordedSite();
+  // A contacts-only WordPress user: FluentCRM answers 403 on the tag and list registries.
+  const fetch: typeof site.fetch = options.forbidTaxonomies
+    ? async (req) =>
+        /\/fluent-crm\/v2\/(tags|lists)(\?|$)/.test(
+          new URL(req.url).pathname + new URL(req.url).search,
+        )
+          ? new Response(
+              JSON.stringify({
+                code: "rest_forbidden",
+                message: "Sorry, you are not allowed to do that.",
+                data: { status: 403 },
+              }),
+              { status: 403, headers: { "Content-Type": "application/json" } },
+            )
+          : site.fetch(req)
+    : site.fetch;
   const config = parseConfig({
     ...extra,
     site: {
@@ -37,7 +54,7 @@ async function connect(
     logLevel: "silent",
   });
   const conn = await connectInProcess(
-    createServerFactory({ config, products: [crmProduct], fetch: site.fetch }),
+    createServerFactory({ config, products: [crmProduct], fetch }),
   );
   close = conn.close;
   const call = async (name: string, args: Record<string, unknown>) => {
@@ -380,6 +397,40 @@ describe("crm_upsert_contact with tags and lists off", () => {
     });
     expect(r.data).toMatchObject({ status: "applied", action: "create" });
     expect(contact(site, "plain.lead@example.com")?.tags).toEqual([]);
+  });
+});
+
+describe("contacts-only WordPress user", () => {
+  const taxonomyReads = (site: RecordedSite) =>
+    site.requests.filter(
+      (r) => r.method === "GET" && /^fluent-crm\/v2\/(tags|lists)$/.test(r.route),
+    );
+
+  it("searches by text without reading tags or lists", async () => {
+    const { site, call } = await connect({ enabled: true }, {}, { forbidTaxonomies: true });
+    const r = await call("crm_find_contacts", { search: "example", per_page: 2 });
+    expect(r.isError).toBeFalsy();
+    expect(r.data).toMatchObject({ total: 50 });
+    expect(taxonomyReads(site)).toHaveLength(0);
+  });
+
+  it("adds a contact without reading tags or lists", async () => {
+    const { site, call } = await connect({ enabled: true }, {}, { forbidTaxonomies: true });
+    const r = await call("crm_upsert_contact", {
+      email: "least.privilege@example.com",
+      first_name: "Least",
+      if_exists: "error",
+      dry_run: false,
+    });
+    expect(r.data).toMatchObject({ status: "applied", action: "create" });
+    expect(taxonomyReads(site)).toHaveLength(0);
+  });
+
+  it("still loads the registry and rejects unknown names when a tag is named", async () => {
+    const { site, call } = await connect();
+    const r = await call("crm_find_contacts", { tags_any: ["no-such-tag"] });
+    expect(r.text).toContain("Unknown tag");
+    expect(taxonomyReads(site).length).toBeGreaterThan(0);
   });
 });
 

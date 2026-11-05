@@ -6,6 +6,12 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- `crm_find_contacts`, `crm_segment_preview` and `crm_upsert_contact` load the tag and list registries only when a
+  call names a tag or list. A WordPress user with FluentCRM contact permissions only (403 on tags and lists) can now
+  search and add contacts.
+
 ### Changed
 
 - FluentSuite Bridge 0.2.1: every database query binds the table name and values through `$wpdb->prepare()` (identifier
