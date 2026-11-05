@@ -14,9 +14,9 @@ import {
   contactName,
   describeSegment,
   hasExclusions,
-  loadTaxonomies,
   resolveSegment,
   SegmentSchema,
+  segmentTaxonomies,
 } from "../segment.js";
 
 export const ContactRow = z.object({
@@ -91,7 +91,7 @@ export function findContactsTool(api: FluentCrmApi) {
       const { cursor, per_page, sort, ...segment } = args;
       const query = { ...segment, sort };
       const page = decodeCursor("crm_find_contacts", query, cursor, per_page);
-      const resolved = resolveSegment(segment, await loadTaxonomies(api, ctx.signal));
+      const resolved = resolveSegment(segment, await segmentTaxonomies(api, segment, ctx.signal));
 
       let contacts: Subscriber[];
       let info: PageInfo;
