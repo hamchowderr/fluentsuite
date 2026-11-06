@@ -25,11 +25,11 @@
   },
   "dependencies": {
     "@fluentsuite/core": "workspace:*",
-    "zod": "4.6.6"
+    "zod": "4.6.7"
   },
   "devDependencies": {
-    "@copilotkit/aimock": "1.45.0",
-    "@modelcontextprotocol/client": "2.3.1",
+    "@copilotkit/aimock": "1.47.0",
+    "@modelcontextprotocol/client": "2.4.0",
     "@fluentsuite/crm": "workspace:*"
   }
 }
