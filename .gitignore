@@ -9,3 +9,6 @@ fluentsuite.config.json
 .DS_Store
 ui-dist/
 __pycache__/
+
+# Beads lock files
+*.gate.lock*
