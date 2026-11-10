@@ -12,3 +12,4 @@ __pycache__/
 
 # Beads lock files
 *.gate.lock*
+.fallow/

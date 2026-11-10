@@ -11,7 +11,7 @@ An MCP server for the WPManageNinja "Fluent" WordPress plugins (FluentCRM, Fluen
 
 ## Building and testing
 
-Node 22+ and pnpm 10. `pnpm install`, then `pnpm check` (Biome lint, typecheck, Vitest) before pushing. `docs/test-site.md` describes the live test site the contract workflow runs against.
+Node 22+ and pnpm 10. `pnpm install`, then `pnpm check` (Biome lint, typecheck, Vitest) and `pnpm deadcode` before pushing. `pnpm deadcode` (Fallow, `.fallowrc.jsonc`) fails on unused files, exports, types and packages: remove them rather than ignoring them. On a pull request CI also runs `fallow audit`, which fails on duplicated or overly complex code the change adds. `docs/test-site.md` describes the live test site the contract workflow runs against.
 
 ## Rules for tools
 

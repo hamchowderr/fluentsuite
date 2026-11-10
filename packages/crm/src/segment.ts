@@ -136,7 +136,7 @@ export function hasExclusions(r: ResolvedSegment): boolean {
   return r.excludeTagIds.size > 0 || r.excludeListIds.size > 0;
 }
 
-export function isExcluded(contact: Subscriber, r: ResolvedSegment): boolean {
+function isExcluded(contact: Subscriber, r: ResolvedSegment): boolean {
   return (
     contact.tags.some((t) => r.excludeTagIds.has(t.id)) ||
     contact.lists.some((l) => r.excludeListIds.has(l.id))

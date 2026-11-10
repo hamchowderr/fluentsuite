@@ -20,11 +20,10 @@ const Taxonomy = z.looseObject({
   title: z.string(),
   slug: z.string(),
 });
-export type Taxonomy = z.infer<typeof Taxonomy>;
 
 const nullableString = z.string().nullish();
 
-export const Subscriber = z.looseObject({
+const Subscriber = z.looseObject({
   id: z.coerce.number(),
   email: z.string(),
   first_name: nullableString,
@@ -92,7 +91,7 @@ const CampaignStats = z.looseObject({
   clicks: z.coerce.number().default(0),
   unsubscribers: z.coerce.number().default(0),
 });
-export const Campaign = z.looseObject({
+const Campaign = z.looseObject({
   id: z.coerce.number(),
   title: z.string(),
   status: z.string(),
@@ -122,14 +121,13 @@ const SequenceStats = z.looseObject({
   emails: z.coerce.number().default(0),
   subscribers: z.coerce.number().default(0),
 });
-export const Sequence = z.looseObject({
+const Sequence = z.looseObject({
   id: z.coerce.number(),
   title: z.string(),
   status: z.string(),
   created_at: nullableString,
   stats: SequenceStats.optional(),
 });
-export type Sequence = z.infer<typeof Sequence>;
 const SequenceEmail = z.looseObject({
   id: z.coerce.number(),
   title: nullableString,
@@ -143,7 +141,6 @@ const SequenceEmail = z.looseObject({
     })
     .nullish(),
 });
-export type SequenceEmail = z.infer<typeof SequenceEmail>;
 const SequencesResponse = z.looseObject({ sequences: LaravelPage(Sequence) });
 const SequenceResponse = z.looseObject({
   sequence: Sequence,
@@ -182,7 +179,6 @@ export const CONTACT_SORTS = ["id", "created_at", "last_activity", "email", "fir
 export type ContactSort = (typeof CONTACT_SORTS)[number];
 
 /** True when FluentCRM Pro is missing: the route is simply not registered. Re-exported from core. */
-export { isMissingRoute };
 
 export class FluentCrmApi {
   readonly crm: NamespacedClient;

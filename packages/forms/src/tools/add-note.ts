@@ -18,7 +18,7 @@ const Output = z.object({
 });
 
 /** Notes are stored as plain text: tags removed, whitespace kept tidy. */
-export function plainNote(note: string): string {
+function plainNote(note: string): string {
   return note
     .replace(/<[^>]*>/g, "")
     .replace(/[ \t]+\n/g, "\n")
