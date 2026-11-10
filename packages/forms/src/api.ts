@@ -30,7 +30,6 @@ const FormRow = z.looseObject({
   total_Submissions: num.nullish(),
   unread_count: num.nullish(),
 });
-export type FormRow = z.infer<typeof FormRow>;
 
 const FormMeta = z.looseObject({ meta_key: z.string(), value: z.unknown() });
 const FormShow = z.looseObject({
@@ -44,7 +43,7 @@ const FormShow = z.looseObject({
   form_meta: z.array(FormMeta).default([]),
 });
 
-export const EntryRaw = z.looseObject({
+const EntryRaw = z.looseObject({
   id: num,
   form_id: num,
   serial_number: z.coerce.number().nullish(),
@@ -92,7 +91,6 @@ const Note = z.looseObject({
   name: nullableString,
   created_at: nullableString,
 });
-export type Note = z.infer<typeof Note>;
 
 const Series = z.looseObject({
   dates: z.array(str).default([]),
@@ -100,14 +98,11 @@ const Series = z.looseObject({
 });
 const Overview = z.looseObject({ overview_chart: Series });
 const Revenue = z.looseObject({ revenue_chart: Series });
-const Stat = z.looseObject({ value: z.unknown(), change: z.unknown().optional() });
-const FormStats = z.looseObject({ form_stats: z.record(z.string(), z.unknown()) });
 const TopForms = z.looseObject({
   top_performing_forms: z
     .array(z.looseObject({ id: num, title: z.string(), value: num }))
     .default([]),
 });
-export type StatValue = z.infer<typeof Stat>;
 
 export type EntryType = "unread" | "read" | "favorites" | "trashed";
 
@@ -132,7 +127,7 @@ export interface FormDetail {
 }
 
 /** The most entries looked through to find one entry by id. */
-export const FIND_SCAN_LIMIT = 500;
+const FIND_SCAN_LIMIT = 500;
 
 export class FluentFormsApi {
   private readonly ff: NamespacedClient;
@@ -284,12 +279,6 @@ export class FluentFormsApi {
   revenue(range: Range, signal?: AbortSignal) {
     return this.call(() =>
       this.ff.get("report/revenue-chart", { query: rangeQuery(range), schema: Revenue, signal }),
-    );
-  }
-
-  formStats(range: Range, signal?: AbortSignal) {
-    return this.call(() =>
-      this.ff.get("report/form-stats", { query: rangeQuery(range), schema: FormStats, signal }),
     );
   }
 

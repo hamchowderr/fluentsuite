@@ -46,7 +46,7 @@ const escapeHtml = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 /** Plain text becomes simple paragraphs; anything that already looks like HTML is kept as is. */
-export function toHtml(body: string): string {
+function toHtml(body: string): string {
   if (/<[a-z][\s\S]*>/i.test(body)) return body;
   return body
     .split(/\n{2,}/)

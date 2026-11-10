@@ -19,6 +19,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The whole history, so `fallow audit` can compare with the base branch.
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -29,6 +32,13 @@ jobs:
         run: pnpm lint
       - name: Typecheck
         run: pnpm typecheck
+      # Fallow (.fallowrc.jsonc): unused files, exports, types and packages fail every run; on a pull request, new
+      # duplicated or overly complex code fails too.
+      - name: Unused code
+        run: pnpm deadcode
+      - name: New duplication and complexity
+        if: github.event_name == 'pull_request'
+        run: pnpm exec fallow audit --base origin/${{ github.base_ref }}
       - name: Lint PHP (FluentSuite Bridge and test-site scripts)
         run: find wordpress scripts/test-site/remote -name '*.php' -print0 | xargs -0 -n1 php -l
       - name: Build

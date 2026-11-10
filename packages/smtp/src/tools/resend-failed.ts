@@ -13,7 +13,7 @@ import { DATE, EmailRow, toEmailRow } from "../format.js";
 import { ACTION_PREVIEW_URI } from "../views.js";
 import { requireBridgeSending } from "./send-test-email.js";
 
-export const RESEND_MAX = 50;
+const RESEND_MAX = 50;
 
 const Input = z
   .object({
