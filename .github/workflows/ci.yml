@@ -63,6 +63,8 @@ jobs:
         with:
           build-dir: wordpress/fluentsuite-bridge
           ignore-warnings: false
+          # Warnings fail too: the wordpress.org reviewers read every one.
+          strict: true
 
   docker:
     name: Docker image
