@@ -1,5 +1,5 @@
 === FluentSuite Bridge ===
-Contributors: chowderr
+Contributors: otakusolutions
 Tags: fluentsmtp, rest-api, mcp, email-logs
 Requires at least: 6.2
 Tested up to: 7.1
