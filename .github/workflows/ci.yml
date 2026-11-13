@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # The whole history, so `fallow audit` can compare with the base branch.
           fetch-depth: 0
@@ -50,12 +50,28 @@ jobs:
         env:
           CI: "true"
 
+  plugin-check:
+    # wordpress.org's own Plugin Check on the FluentSuite Bridge plugin: every category, the directory
+    # checks (plugin_repo) included and nothing excluded.
+    name: Plugin Check for wordpress.org (FluentSuite Bridge)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Plugin Check (every category)
+        uses: WordPress/plugin-check-action@v1
+        with:
+          build-dir: wordpress/fluentsuite-bridge
+          ignore-warnings: false
+          # Warnings fail too: the wordpress.org reviewers read every one.
+          strict: true
+
   docker:
     name: Docker image
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build
         run: docker build -t fluentsuite:ci .
       - name: Refuses HTTP off loopback without a token

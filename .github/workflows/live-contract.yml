@@ -29,7 +29,7 @@ jobs:
             echo "::notice::Live contract secrets are not set; skipping. See docs/test-site.md."
           fi
       - if: steps.secrets.outputs.ready == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - if: steps.secrets.outputs.ready == 'true'
         uses: pnpm/action-setup@v6
       - if: steps.secrets.outputs.ready == 'true'
