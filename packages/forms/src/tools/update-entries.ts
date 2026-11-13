@@ -11,7 +11,7 @@ import type { EntryRaw, FluentFormsApi } from "../api.js";
 import { DATE, EntryRow, entryLine, toEntryRow } from "../format.js";
 
 /** The most entries one call changes. */
-export const UPDATE_CAP = 500;
+const UPDATE_CAP = 500;
 
 const ACTIONS = {
   mark_read: { label: "Mark read", bulk: "read", applies: (e: EntryRaw) => e.status === "unread" },

@@ -42,7 +42,7 @@ function pick(
   return response[name];
 }
 
-export function displayName(v: unknown): string | null {
+function displayName(v: unknown): string | null {
   if (!v) return null;
   if (typeof v === "string") return v;
   if (typeof v === "object") {

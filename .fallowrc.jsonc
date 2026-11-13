@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fallow-rs/fallow/main/schema.json",
+  "minimumVersion": "3.41.0",
+  // The MCP App views, bundled by packages/core/scripts/build-views.mjs.
+  "entry": ["packages/**/ui/**/*.ts"],
+  "dynamicallyLoaded": ["packages/**/ui/**/*.css"],
+  // Run by hand to record fixtures (docs/test-site.md).
+  "supportEntry": ["scripts/*.mjs"],
+  "duplicates": { "minOccurrences": 3 }
+}

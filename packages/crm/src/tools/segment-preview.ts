@@ -17,7 +17,7 @@ const Input = SegmentSchema.extend({
   sample_size: z.number().int().min(0).max(25).default(5),
 });
 
-export const SegmentPreview = z.object({
+const SegmentPreview = z.object({
   segment: z.string(),
   count: z.number(),
   excluded: z.number(),
@@ -25,7 +25,7 @@ export const SegmentPreview = z.object({
   by_type: z.record(z.string(), z.number()),
   sample: z.array(ContactRow),
 });
-export type SegmentPreview = z.infer<typeof SegmentPreview>;
+type SegmentPreview = z.infer<typeof SegmentPreview>;
 
 function tally(values: string[]): Record<string, number> {
   const out: Record<string, number> = {};

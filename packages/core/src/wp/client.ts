@@ -256,22 +256,11 @@ export class NamespacedClient {
     return (await this.wp.request<T>("GET", this.path(route), options)).data;
   }
 
-  async getWithMeta<T = unknown>(
-    route: string,
-    options?: Omit<RequestOptions<T>, "body">,
-  ): Promise<WpResponse<T>> {
-    return this.wp.request<T>("GET", this.path(route), options);
-  }
-
   async post<T = unknown>(route: string, options?: RequestOptions<T>): Promise<T> {
     return (await this.wp.request<T>("POST", this.path(route), options)).data;
   }
 
   async put<T = unknown>(route: string, options?: RequestOptions<T>): Promise<T> {
     return (await this.wp.request<T>("PUT", this.path(route), options)).data;
-  }
-
-  async delete<T = unknown>(route: string, options?: RequestOptions<T>): Promise<T> {
-    return (await this.wp.request<T>("DELETE", this.path(route), options)).data;
   }
 }

@@ -20,7 +20,7 @@ const nullableString = z.string().nullish();
 const Recipient = z.looseObject({ email: z.string(), name: nullableString });
 export type Recipient = z.infer<typeof Recipient>;
 
-export const LogRow = z.looseObject({
+const LogRow = z.looseObject({
   id: z.coerce.number(),
   created_at: nullableString,
   status: z.string(),
@@ -47,7 +47,6 @@ const LogDetail = LogRow.extend({
 export type LogDetail = z.infer<typeof LogDetail>;
 
 const Counts = z.looseObject({ sent: z.coerce.number(), failed: z.coerce.number() });
-export type Counts = z.infer<typeof Counts>;
 
 const Connection = z.looseObject({
   id: z.string(),
@@ -62,7 +61,6 @@ const Connection = z.looseObject({
   port: nullableString,
   encryption: nullableString,
 });
-export type Connection = z.infer<typeof Connection>;
 
 const Status = z.looseObject({
   bridge: z.looseObject({ version: z.string(), sending_allowed: z.boolean() }),
@@ -91,7 +89,6 @@ const Report = z.looseObject({
     }),
   ),
 });
-export type Report = z.infer<typeof Report>;
 
 const TestEmailResult = z.looseObject({
   sent: z.boolean(),

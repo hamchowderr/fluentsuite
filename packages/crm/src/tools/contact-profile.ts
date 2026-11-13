@@ -26,7 +26,7 @@ const Input = z
     message: "Provide email or id.",
   });
 
-export const ContactProfile = z.object({
+const ContactProfile = z.object({
   contact: z.object({
     id: z.number(),
     name: z.string(),
